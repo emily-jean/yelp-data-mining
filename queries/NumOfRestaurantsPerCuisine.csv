@@ -1,0 +1,761 @@
+Pittsburgh,Restaurants,2089
+Pittsburgh,Food,1010
+Pittsburgh,Shopping,893
+Pittsburgh,Nightlife,580
+Pittsburgh,Bars,534
+Pittsburgh,Beauty & Spas,483
+Pittsburgh,Pizza,342
+Pittsburgh,Event Planning & Services,328
+Pittsburgh,American (Traditional),321
+Pittsburgh,Home Services,314
+Pittsburgh,Automotive,303
+Pittsburgh,Sandwiches,301
+Pittsburgh,Local Services,292
+Pittsburgh,Health & Medical,292
+Pittsburgh,American (New),281
+Pittsburgh,Active Life,268
+Pittsburgh,Coffee & Tea,240
+Pittsburgh,Fashion,239
+Pittsburgh,Arts & Entertainment,217
+Pittsburgh,Italian,207
+Pittsburgh,Hotels & Travel,188
+Pittsburgh,Hair Salons,176
+Pittsburgh,Fast Food,157
+Pittsburgh,Auto Repair,154
+Pittsburgh,Breakfast & Brunch,152
+Pittsburgh,Burgers,151
+Pittsburgh,Home & Garden,146
+Pittsburgh,Nail Salons,139
+Pittsburgh,Fitness & Instruction,137
+Pittsburgh,Specialty Food,128
+Pittsburgh,Chinese,128
+Pittsburgh,Grocery,121
+Pittsburgh,Bakeries,114
+Pittsburgh,Mexican,112
+Pittsburgh,Cafes,109
+Pittsburgh,Desserts,107
+Pittsburgh,Pets,105
+Pittsburgh,Hotels,104
+Pittsburgh,Ice Cream & Frozen Yogurt,97
+Pittsburgh,Women's Clothing,96
+Pittsburgh,Real Estate,93
+Pittsburgh,Caterers,92
+Pittsburgh,Salad,91
+Pittsburgh,Professional Services,86
+Pittsburgh,Seafood,85
+Pittsburgh,Flowers & Gifts,85
+Pittsburgh,Beer,84
+Pittsburgh,Wine & Spirits,84
+Pittsburgh,Venues & Event Spaces,82
+Pittsburgh,Diners,82
+Pittsburgh,Dentists,77
+Pittsburgh,Chicken Wings,77
+Pittsburgh,Hair Removal,76
+Pittsburgh,Delis,75
+Pittsburgh,Doctors,73
+Pittsburgh,Sports Bars,72
+Pittsburgh,Gyms,72
+Pittsburgh,Day Spas,70
+Pittsburgh,Sushi Bars,69
+Pittsburgh,Barbers,69
+Pittsburgh,Public Services & Government,69
+Pittsburgh,Pubs,68
+Pittsburgh,Lounges,67
+Pittsburgh,General Dentistry,66
+Pittsburgh,Pet Services,65
+Pittsburgh,Massage,64
+Pittsburgh,Convenience Stores,63
+Pittsburgh,Tires,63
+Pittsburgh,Accessories,62
+Pittsburgh,Oil Change Stations,62
+Pittsburgh,Men's Clothing,60
+Pittsburgh,Mediterranean,60
+Pittsburgh,Drugstores,59
+Pittsburgh,Japanese,59
+Pittsburgh,Education,59
+Pittsburgh,Arts & Crafts,58
+Pittsburgh,Skin Care,57
+Pittsburgh,Cocktail Bars,56
+Pittsburgh,Books,54
+Pittsburgh,Mags,54
+Pittsburgh,Music & Video,54
+Pittsburgh,Department Stores,54
+Pittsburgh,Thai,53
+Pittsburgh,Jewelry,52
+Pittsburgh,Local Flavor,51
+Pittsburgh,Dive Bars,51
+Pittsburgh,Food Trucks,51
+Pittsburgh,Trainers,51
+Pittsburgh,Yoga,50
+Pittsburgh,Sporting Goods,50
+Pittsburgh,Dry Cleaning & Laundry,48
+Pittsburgh,Home Decor,48
+Pittsburgh,Apartments,48
+Pittsburgh,Cosmetics & Beauty Supply,47
+Pittsburgh,Barbeque,47
+Pittsburgh,Optometrists,47
+Pittsburgh,Car Dealers,47
+Pittsburgh,Asian Fusion,46
+Pittsburgh,Steakhouses,46
+Pittsburgh,Waxing,45
+Pittsburgh,Laundry Services,45
+Pittsburgh,Juice Bars & Smoothies,44
+Pittsburgh,Furniture Stores,43
+Pittsburgh,Music Venues,42
+Pittsburgh,Gas Stations,42
+Pittsburgh,Florists,42
+Pittsburgh,Sewing & Alterations,41
+Pittsburgh,Shoe Stores,41
+Pittsburgh,Vegetarian,40
+Pittsburgh,Wine Bars,39
+Pittsburgh,Pet Groomers,39
+Pittsburgh,Heating & Air Conditioning/HVAC,39
+Pittsburgh,Art Galleries,38
+Pittsburgh,Parks,38
+Pittsburgh,Auto Parts & Supplies,37
+Pittsburgh,Tattoo,37
+Pittsburgh,Bagels,36
+Pittsburgh,Pet Boarding/Pet Sitting,36
+Pittsburgh,Eyewear & Opticians,36
+Pittsburgh,Hair Stylists,36
+Pittsburgh,Gift Shops,36
+Pittsburgh,Middle Eastern,36
+Pittsburgh,Indian,35
+Pittsburgh,Hot Dogs,35
+Pittsburgh,Financial Services,35
+Pittsburgh,Chiropractors,35
+Pittsburgh,Body Shops,34
+Pittsburgh,Shipping Centers,34
+Pittsburgh,Contractors,34
+Pittsburgh,Veterinarians,34
+Pittsburgh,Performing Arts,34
+Pittsburgh,Party & Event Planning,33
+Pittsburgh,Mobile Phones,33
+Pittsburgh,Antiques,33
+Pittsburgh,Dance Clubs,32
+Pittsburgh,Massage Therapy,32
+Pittsburgh,Eyelash Service,32
+Pittsburgh,Soup,32
+Pittsburgh,Cosmetic Dentists,31
+Pittsburgh,Greek,31
+Pittsburgh,Food Delivery Services,30
+Pittsburgh,Electronics,29
+Pittsburgh,Tanning,29
+Pittsburgh,Discount Store,29
+Pittsburgh,Transportation,29
+Pittsburgh,Landmarks & Historical Buildings,28
+Pittsburgh,Real Estate Services,28
+Pittsburgh,Bookstores,27
+Pittsburgh,Plumbing,27
+Pittsburgh,IT Services & Computer Repair,27
+Pittsburgh,Breweries,27
+Pittsburgh,Pet Stores,27
+Pittsburgh,Property Management,27
+Pittsburgh,Printing Services,26
+Pittsburgh,Car Rental,26
+Pittsburgh,Museums,25
+Pittsburgh,Vegan,25
+Pittsburgh,Specialty Schools,25
+Pittsburgh,Used,25
+Pittsburgh,Vintage & Consignment,25
+Pittsburgh,Movers,25
+Pittsburgh,Donuts,23
+Pittsburgh,Home Cleaning,23
+Pittsburgh,Wedding Planning,23
+Pittsburgh,Thrift Stores,23
+Pittsburgh,Towing,23
+Pittsburgh,Soul Food,22
+Pittsburgh,Ethnic Food,22
+Pittsburgh,Appliances,22
+Pittsburgh,Buffets,21
+Pittsburgh,Candy Stores,21
+Pittsburgh,Piercing,21
+Pittsburgh,Nurseries & Gardening,21
+Pittsburgh,Men's Hair Salons,21
+Pittsburgh,Latin American,20
+Pittsburgh,Makeup Artists,20
+Pittsburgh,Kitchen & Bath,20
+Pittsburgh,Appliances & Repair,20
+Pittsburgh,Car Wash,20
+Pittsburgh,Sports Wear,19
+Pittsburgh,Oral Surgeons,19
+Pittsburgh,Bridal,19
+Pittsburgh,Self Storage,19
+Pittsburgh,Meat Shops,19
+Pittsburgh,Tobacco Shops,19
+Pittsburgh,Gluten-Free,19
+Pittsburgh,Music & DVDs,18
+Pittsburgh,Pet Training,18
+Pittsburgh,Hardware Stores,18
+Pittsburgh,Bikes,18
+Pittsburgh,Tea Rooms,18
+Pittsburgh,French,18
+Pittsburgh,Building Supplies,18
+Pittsburgh,Ophthalmologists,18
+Pittsburgh,Religious Organizations,18
+Pittsburgh,Gastropubs,17
+Pittsburgh,Beer Bar,17
+Pittsburgh,Hair Extensions,17
+Pittsburgh,Shopping Centers,17
+Pittsburgh,Tapas/Small Plates,17
+Pittsburgh,Auto Detailing,17
+Pittsburgh,Cinema,17
+Pittsburgh,Street Vendors,16
+Pittsburgh,Medical Spas,16
+Pittsburgh,Comfort Food,16
+Pittsburgh,Hospitals,16
+Pittsburgh,Tex-Mex,16
+Pittsburgh,Children's Clothing,16
+Pittsburgh,Tours,16
+Pittsburgh,Mattresses,15
+Pittsburgh,Korean,15
+Pittsburgh,Photographers,15
+Pittsburgh,Pilates,15
+Pittsburgh,Churches,15
+Pittsburgh,Post Offices,15
+Pittsburgh,Imported Food,15
+Pittsburgh,Hobby Shops,15
+Pittsburgh,Toy Stores,15
+Pittsburgh,Turkish,15
+Pittsburgh,Bowling,14
+Pittsburgh,Noodles,14
+Pittsburgh,Banks & Credit Unions,14
+Pittsburgh,Libraries,14
+Pittsburgh,Colleges & Universities,14
+Pittsburgh,Dog Walkers,14
+Pittsburgh,Gay Bars,14
+Pittsburgh,Cosmetic Surgeons,14
+Pittsburgh,Security Systems,14
+Pittsburgh,Art Classes,13
+Pittsburgh,Cards & Stationery,13
+Pittsburgh,Bike Repair/Maintenance,13
+Pittsburgh,Vape Shops,13
+Pittsburgh,Tapas Bars,13
+Pittsburgh,Medical Centers,13
+Pittsburgh,Shoe Repair,13
+Pittsburgh,Signmaking,12
+Pittsburgh,Community Service/Non-Profit,12
+Pittsburgh,Mass Media,12
+Pittsburgh,Carpet Cleaning,12
+Pittsburgh,Caribbean,12
+Pittsburgh,Auto Glass Services,12
+Pittsburgh,Mobile Phone Repair,12
+Pittsburgh,Internet Service Providers,12
+Pittsburgh,Arcades,11
+Pittsburgh,Southern,11
+Pittsburgh,Formal Wear,11
+Pittsburgh,Computers,11
+Pittsburgh,Real Estate Agents,11
+Pittsburgh,Watches,11
+Pittsburgh,Roofing,11
+Pittsburgh,Fruits & Veggies,11
+Pittsburgh,Karaoke,11
+Pittsburgh,Jewelry Repair,11
+Pittsburgh,Vietnamese,11
+Pittsburgh,Art Schools,11
+Pittsburgh,Photography Stores & Services,11
+Pittsburgh,Notaries,11
+Pittsburgh,Art Supplies,11
+Pittsburgh,Outdoor Gear,11
+Pittsburgh,Chocolatiers & Shops,11
+Pittsburgh,Blow Dry/Out Services,10
+Pittsburgh,Dry Cleaning,10
+Pittsburgh,Farmers Market,10
+Pittsburgh,Hookah Bars,10
+Pittsburgh,Urgent Care,10
+Pittsburgh,Bed & Breakfast,10
+Pittsburgh,Keys & Locksmiths,10
+Pittsburgh,Sports Clubs,10
+Pittsburgh,Escape Games,10
+Pittsburgh,Laser Hair Removal,10
+Pittsburgh,Szechuan,10
+Pittsburgh,Musical Instruments & Teachers,10
+Pittsburgh,Taiwanese,10
+Pittsburgh,Electronics Repair,9
+Pittsburgh,Bike Rentals,9
+Pittsburgh,Cupcakes,9
+Pittsburgh,Wineries,9
+Pittsburgh,Reiki,9
+Pittsburgh,Weight Loss Centers,9
+Pittsburgh,Boot Camps,9
+Pittsburgh,Martial Arts,9
+Pittsburgh,Endodontists,9
+Pittsburgh,Creperies,9
+Pittsburgh,Graphic Design,9
+Pittsburgh,Reflexology,9
+Pittsburgh,Comic Books,9
+Pittsburgh,Bubble Tea,9
+Pittsburgh,Insurance,9
+Pittsburgh,Office Equipment,9
+Pittsburgh,Carpeting,9
+Pittsburgh,Vinyl Records,9
+Pittsburgh,Food Stands,9
+Pittsburgh,Hiking,9
+Pittsburgh,Obstetricians & Gynecologists,9
+Pittsburgh,Child Care & Day Care,8
+Pittsburgh,Shaved Ice,8
+Pittsburgh,Interval Training Gyms,8
+Pittsburgh,Junk Removal & Hauling,8
+Pittsburgh,Interior Design,8
+Pittsburgh,Stadiums & Arenas,8
+Pittsburgh,Windows Installation,8
+Pittsburgh,Social Clubs,8
+Pittsburgh,Cycling Classes,8
+Pittsburgh,Health Markets,8
+Pittsburgh,Airport Shuttles,8
+Pittsburgh,Flooring,8
+Pittsburgh,Lawyers,8
+Pittsburgh,Electricians,8
+Pittsburgh,Fish & Chips,8
+Pittsburgh,Diagnostic Services,8
+Pittsburgh,Windshield Installation & Repair,8
+Pittsburgh,Festivals,7
+Pittsburgh,Spray Tanning,7
+Pittsburgh,Party Supplies,7
+Pittsburgh,Lingerie,7
+Pittsburgh,Nutritionists,7
+Pittsburgh,Summer Camps,7
+Pittsburgh,Polish,7
+Pittsburgh,Eyebrow Services,7
+Pittsburgh,Yelp Events,7
+Pittsburgh,Event Photography,7
+Pittsburgh,Halal,7
+Pittsburgh,Smog Check Stations,7
+Pittsburgh,Transmission Repair,7
+Pittsburgh,Pakistani,7
+Pittsburgh,Truck Rental,7
+Pittsburgh,Orthodontists,7
+Pittsburgh,Commercial Real Estate,7
+Pittsburgh,Physical Therapy,7
+Pittsburgh,Office Cleaning,7
+Pittsburgh,Limos,7
+Pittsburgh,Butcher,7
+Pittsburgh,Damage Restoration,7
+Pittsburgh,Pasta Shops,7
+Pittsburgh,Landscaping,7
+Pittsburgh,Adult Entertainment,7
+Pittsburgh,Accountants,7
+Pittsburgh,Television Service Providers,7
+Pittsburgh,Parking,7
+Pittsburgh,Water Heater Installation/Repair,7
+Pittsburgh,Dance Studios,7
+Pittsburgh,Paint & Sip,6
+Pittsburgh,Modern European,6
+Pittsburgh,Belgian,6
+Pittsburgh,Plus Size Fashion,6
+Pittsburgh,Framing,6
+Pittsburgh,DJs,6
+Pittsburgh,Radio Stations,6
+Pittsburgh,Session Photography,6
+Pittsburgh,Ramen,6
+Pittsburgh,Irish,6
+Pittsburgh,Periodontists,6
+Pittsburgh,Leather Goods,6
+Pittsburgh,Home Inspectors,6
+Pittsburgh,Fabric Stores,6
+Pittsburgh,Travel Services,6
+Pittsburgh,Financial Advising,6
+Pittsburgh,Auto Insurance,6
+Pittsburgh,Pediatric Dentists,6
+Pittsburgh,Funeral Services & Cemeteries,6
+Pittsburgh,Wholesale Stores,6
+Pittsburgh,Dermatologists,6
+Pittsburgh,Lebanese,6
+Pittsburgh,Musical Instrument Services,6
+Pittsburgh,Boxing,6
+Pittsburgh,Baby Gear & Furniture,6
+Pittsburgh,Taxis,6
+Pittsburgh,Adult Education,6
+Pittsburgh,Coffee Roasteries,6
+Pittsburgh,Tax Services,6
+Pittsburgh,Handyman,6
+Pittsburgh,Golf,6
+Pittsburgh,Recreation Centers,6
+Pittsburgh,Cooking Schools,6
+Pittsburgh,Playgrounds,6
+Pittsburgh,Airlines,6
+Pittsburgh,Mobile Phone Accessories,5
+Pittsburgh,Art Museums,5
+Pittsburgh,Marketing,5
+Pittsburgh,Acupuncture,5
+Pittsburgh,Skating Rinks,5
+Pittsburgh,Cheesesteaks,5
+Pittsburgh,Used Car Dealers,5
+Pittsburgh,Home & Rental Insurance,5
+Pittsburgh,Kids Activities,5
+Pittsburgh,Laser Eye Surgery/Lasik,5
+Pittsburgh,Jazz & Blues,5
+Pittsburgh,Swimming Pools,5
+Pittsburgh,Garage Door Services,5
+Pittsburgh,Tacos,5
+Pittsburgh,Guitar Stores,5
+Pittsburgh,Naturopathic/Holistic,5
+Pittsburgh,Dog Parks,5
+Pittsburgh,German,5
+Pittsburgh,Peruvian,5
+Pittsburgh,Personal Shopping,5
+Pittsburgh,Tree Services,5
+Pittsburgh,Car Stereo Installation,5
+Pittsburgh,Party Equipment Rentals,5
+Pittsburgh,Pool Halls,5
+Pittsburgh,Divorce & Family Law,5
+Pittsburgh,Gutter Services,5
+Pittsburgh,Watch Repair,5
+Pittsburgh,Public Transportation,5
+Pittsburgh,Vinyl Siding,5
+Pittsburgh,Leisure Centers,4
+Pittsburgh,Amusement Parks,4
+Pittsburgh,Print Media,4
+Pittsburgh,Herbs & Spices,4
+Pittsburgh,Internet Cafes,4
+Pittsburgh,Videos & Video Game Rental,4
+Pittsburgh,Recycling Center,4
+Pittsburgh,Permanent Makeup,4
+Pittsburgh,Psychics & Astrologers,4
+Pittsburgh,Cuban,4
+Pittsburgh,Gold Buyers,4
+Pittsburgh,Screen Printing/T-Shirt Printing,4
+Pittsburgh,Furniture Reupholstery,4
+Pittsburgh,Rugs,4
+Pittsburgh,Popcorn Shops,4
+Pittsburgh,Auto Customization,4
+Pittsburgh,Masonry/Concrete,4
+Pittsburgh,Maternity Wear,4
+Pittsburgh,Organic Stores,4
+Pittsburgh,Spanish,4
+Pittsburgh,Carpet Installation,4
+Pittsburgh,Lighting Fixtures & Equipment,4
+Pittsburgh,Boat Charters,4
+Pittsburgh,Vitamins & Supplements,4
+Pittsburgh,Photo Booth Rentals,4
+Pittsburgh,Mountain Biking,4
+Pittsburgh,Threading Services,4
+Pittsburgh,Special Education,4
+Pittsburgh,Do-It-Yourself Food,4
+Pittsburgh,Airports,4
+Pittsburgh,Barre Classes,4
+Pittsburgh,Doulas,4
+Pittsburgh,Boating,4
+Pittsburgh,Life Coach,4
+Pittsburgh,Animal Shelters,4
+Pittsburgh,Wraps,4
+Pittsburgh,International Grocery,4
+Pittsburgh,Whiskey Bars,4
+Pittsburgh,Tanning Beds,4
+Pittsburgh,Departments of Motor Vehicles,4
+Pittsburgh,Laboratory Testing,4
+Pittsburgh,Laser Tag,3
+Pittsburgh,Meditation Centers,3
+Pittsburgh,Preschools,3
+Pittsburgh,Cardiologists,3
+Pittsburgh,Professional Sports Teams,3
+Pittsburgh,Cajun/Creole,3
+Pittsburgh,Guest Houses,3
+Pittsburgh,Telecommunications,3
+Pittsburgh,Chicken Shop,3
+Pittsburgh,Outlet Stores,3
+Pittsburgh,Mortgage Brokers,3
+Pittsburgh,Life Insurance,3
+Pittsburgh,Community Centers,3
+Pittsburgh,Historical Tours,3
+Pittsburgh,Appraisal Services,3
+Pittsburgh,Dumpster Rental,3
+Pittsburgh,Amateur Sports Teams,3
+Pittsburgh,Gelato,3
+Pittsburgh,Battery Stores,3
+Pittsburgh,Boat Repair,3
+Pittsburgh,Legal Services,3
+Pittsburgh,Criminal Defense Law,3
+Pittsburgh,Propane,3
+Pittsburgh,Landscape Architects,3
+Pittsburgh,Snow Removal,3
+Pittsburgh,Couriers & Delivery Services,3
+Pittsburgh,Pretzels,3
+Pittsburgh,Cambodian,3
+Pittsburgh,Cabinetry,3
+Pittsburgh,Dim Sum,3
+Pittsburgh,Paint Stores,3
+Pittsburgh,Costumes,3
+Pittsburgh,Air Duct Cleaning,3
+Pittsburgh,Opera & Ballet,3
+Pittsburgh,Roadside Assistance,3
+Pittsburgh,Family Practice,3
+Pittsburgh,Motorcycle Dealers,3
+Pittsburgh,Tennis,3
+Pittsburgh,Luggage,3
+Pittsburgh,Septic Services,3
+Pittsburgh,Video/Film Production,3
+Pittsburgh,Newspapers & Magazines,3
+Pittsburgh,Rock Climbing,3
+Pittsburgh,Car Window Tinting,3
+Pittsburgh,Waffles,3
+Pittsburgh,Educational Services,3
+Pittsburgh,Country Clubs,3
+Pittsburgh,Vehicle Wraps,3
+Pittsburgh,Spin Classes,3
+Pittsburgh,Sports Medicine,3
+Pittsburgh,Champagne Bars,3
+Pittsburgh,Pet Adoption,3
+Pittsburgh,Diagnostic Imaging,3
+Pittsburgh,Home Organization,3
+Pittsburgh,Cosmetology Schools,3
+Pittsburgh,Moroccan,3
+Pittsburgh,Door Sales/Installation,3
+Pittsburgh,Resorts,3
+Pittsburgh,Real Estate Law,3
+Pittsburgh,Painters,3
+Pittsburgh,British,3
+Pittsburgh,Distilleries,3
+Pittsburgh,Packing Services,3
+Pittsburgh,Pediatricians,2
+Pittsburgh,Elementary Schools,2
+Pittsburgh,Cafeteria,2
+Pittsburgh,Auto Loan Providers,2
+Pittsburgh,Cheese Shops,2
+Pittsburgh,Himalayan/Nepalese,2
+Pittsburgh,Observatories,2
+Pittsburgh,Video Game Stores,2
+Pittsburgh,Advertising,2
+Pittsburgh,Cooking Classes,2
+Pittsburgh,Mini Golf,2
+Pittsburgh,Commercial Truck Repair,2
+Pittsburgh,Car Share Services,2
+Pittsburgh,Food Tours,2
+Pittsburgh,Beer Tours,2
+Pittsburgh,Screen Printing,2
+Pittsburgh,Estate Liquidation,2
+Pittsburgh,Data Recovery,2
+Pittsburgh,Egyptian,2
+Pittsburgh,Furniture Repair,2
+Pittsburgh,Hungarian,2
+Pittsburgh,Wheel & Rim Repair,2
+Pittsburgh,Fireplace Services,2
+Pittsburgh,Auto Upholstery,2
+Pittsburgh,Public Art,2
+Pittsburgh,Bistros,2
+Pittsburgh,Filipino,2
+Pittsburgh,Aquariums,2
+Pittsburgh,Zoos,2
+Pittsburgh,Skate Parks,2
+Pittsburgh,Uzbek,2
+Pittsburgh,Bespoke Clothing,2
+Pittsburgh,Food Court,2
+Pittsburgh,Portuguese,2
+Pittsburgh,African,2
+Pittsburgh,Comedy Clubs,2
+Pittsburgh,Bartending Schools,2
+Pittsburgh,Counseling & Mental Health,2
+Pittsburgh,Payroll Services,2
+Pittsburgh,Mongolian,2
+Pittsburgh,Beer Gardens,2
+Pittsburgh,Pan Asian,2
+Pittsburgh,Brasseries,2
+Pittsburgh,Fences & Gates,2
+Pittsburgh,Emergency Pet Hospital,2
+Pittsburgh,Brazilian,2
+Pittsburgh,Television Stations,2
+Pittsburgh,Employment Agencies,2
+Pittsburgh,Custom Cakes,2
+Pittsburgh,Vehicle Shipping,2
+Pittsburgh,Adult,2
+Pittsburgh,Internal Medicine,2
+Pittsburgh,Laundromat,2
+Pittsburgh,Knitting Supplies,2
+Pittsburgh,Kosher,2
+Pittsburgh,Tattoo Removal,2
+Pittsburgh,Registration Services,2
+Pittsburgh,Traditional Chinese Medicine,2
+Pittsburgh,Beaches,2
+Pittsburgh,Botanical Gardens,2
+Pittsburgh,Fitness/Exercise Equipment,2
+Pittsburgh,Casinos,2
+Pittsburgh,Pool & Hot Tub Service,2
+Pittsburgh,Videographers,2
+Pittsburgh,Valet Services,2
+Pittsburgh,Private Tutors,2
+Pittsburgh,Used Bookstore,2
+Pittsburgh,Argentine,2
+Pittsburgh,Rehabilitation Center,2
+Pittsburgh,Cultural Center,2
+Pittsburgh,Races & Competitions,2
+Pittsburgh,Seafood Markets,2
+Pittsburgh,Pest Control,2
+Pittsburgh,Holiday Decorations,2
+Pittsburgh,Ethiopian,2
+Pittsburgh,DUI Law,2
+Pittsburgh,Paintball,2
+Pittsburgh,Town Car Service,2
+Pittsburgh,Cantonese,2
+Pittsburgh,Embroidery & Crochet,2
+Pittsburgh,Gymnastics,2
+Pittsburgh,Challenge Courses,2
+Pittsburgh,Home Staging,2
+Pittsburgh,Train Stations,2
+Pittsburgh,Basque,2
+Pittsburgh,Wine Tasting Room,2
+Pittsburgh,Business Law,2
+Pittsburgh,Car Buyers,2
+Pittsburgh,Poke,2
+Pittsburgh,Glass & Mirrors,2
+Pittsburgh,Wigs,2
+Pittsburgh,Home Window Tinting,2
+Pittsburgh,Ski & Snowboard Shops,2
+Pittsburgh,Burmese,2
+Pittsburgh,Medical Supplies,2
+Pittsburgh,Clock Repair,2
+Pittsburgh,Nail Technicians,2
+Pittsburgh,Piano Bars,1
+Pittsburgh,Retirement Homes,1
+Pittsburgh,ATV Rentals/Tours,1
+Pittsburgh,Party Bike Rentals,1
+Pittsburgh,Souvenir Shops,1
+Pittsburgh,Home Network Installation,1
+Pittsburgh,Middle Schools & High Schools,1
+Pittsburgh,Knife Sharpening,1
+Pittsburgh,Spiritual Shop,1
+Pittsburgh,Caricatures,1
+Pittsburgh,Bus Tours,1
+Pittsburgh,Police Departments,1
+Pittsburgh,Clothing Rental,1
+Pittsburgh,Podiatrists,1
+Pittsburgh,Homeowner Association,1
+Pittsburgh,Mortgage Lenders,1
+Pittsburgh,Paint-Your-Own Pottery,1
+Pittsburgh,Pop-up Shops,1
+Pittsburgh,Chimney Sweeps,1
+Pittsburgh,Walking Tours,1
+Pittsburgh,Auction Houses,1
+Pittsburgh,CSA,1
+Pittsburgh,Speakeasies,1
+Pittsburgh,Mobile Dent Repair,1
+Pittsburgh,Party Bus Rentals,1
+Pittsburgh,General Litigation,1
+Pittsburgh,Personal Injury Law,1
+Pittsburgh,Shoe Shine,1
+Pittsburgh,Russian,1
+Pittsburgh,Piano Services,1
+Pittsburgh,Skate Shops,1
+Pittsburgh,Smokehouse,1
+Pittsburgh,Bartenders,1
+Pittsburgh,Car Inspectors,1
+Pittsburgh,Carpenters,1
+Pittsburgh,Investing,1
+Pittsburgh,Trailer Repair,1
+Pittsburgh,Midwives,1
+Pittsburgh,Motorcycle Repair,1
+Pittsburgh,Cardio Classes,1
+Pittsburgh,Translation Services,1
+Pittsburgh,Waterproofing,1
+Pittsburgh,Wine Tours,1
+Pittsburgh,Arabian,1
+Pittsburgh,Dietitians,1
+Pittsburgh,Guns & Ammo,1
+Pittsburgh,Gun/Rifle Ranges,1
+Pittsburgh,Kickboxing,1
+Pittsburgh,Bangladeshi,1
+Pittsburgh,Acai Bowls,1
+Pittsburgh,Awnings,1
+Pittsburgh,Children's Museums,1
+Pittsburgh,Horseback Riding,1
+Pittsburgh,Tutoring Centers,1
+Pittsburgh,Test Preparation,1
+Pittsburgh,Customized Merchandise,1
+Pittsburgh,Pawn Shops,1
+Pittsburgh,Personal Chefs,1
+Pittsburgh,Personal Assistants,1
+Pittsburgh,Venezuelan,1
+Pittsburgh,Bird Shops,1
+Pittsburgh,Outdoor Furniture Stores,1
+Pittsburgh,Christmas Trees,1
+Pittsburgh,Brewing Supplies,1
+Pittsburgh,Hawaiian,1
+Pittsburgh,Prosthodontists,1
+Pittsburgh,Live/Raw Food,1
+Pittsburgh,Swimwear,1
+Pittsburgh,Airport Terminals,1
+Pittsburgh,Window Washing,1
+Pittsburgh,Gardeners,1
+Pittsburgh,Fishing,1
+Pittsburgh,Boat Tours,1
+Pittsburgh,Malaysian,1
+Pittsburgh,Musicians,1
+Pittsburgh,Recording & Rehearsal Studios,1
+Pittsburgh,Music Production Services,1
+Pittsburgh,Shared Office Spaces,1
+Pittsburgh,Real Estate Photography,1
+Pittsburgh,Massage Schools,1
+Pittsburgh,Digitizing Services,1
+Pittsburgh,Employment Law,1
+Pittsburgh,Ticket Sales,1
+Pittsburgh,Vocational & Technical School,1
+Pittsburgh,Web Design,1
+Pittsburgh,Coffeeshops,1
+Pittsburgh,Insulation Installation,1
+Pittsburgh,Emergency Rooms,1
+Pittsburgh,Hot Pot,1
+Pittsburgh,Travel Agents,1
+Pittsburgh,Tiki Bars,1
+Pittsburgh,Ayurveda,1
+Pittsburgh,Tai Chi,1
+Pittsburgh,Ethnic Grocery,1
+Pittsburgh,Medical Transportation,1
+Pittsburgh,Countertop Installation,1
+Pittsburgh,Tiling,1
+Pittsburgh,Fire Protection Services,1
+Pittsburgh,Home Automation,1
+Pittsburgh,Marinas,1
+Pittsburgh,Magicians,1
+Pittsburgh,Irish Pub,1
+Pittsburgh,Laotian,1
+Pittsburgh,Head Shops,1
+Pittsburgh,Placenta Encapsulations,1
+Pittsburgh,Falafel,1
+Pittsburgh,Flea Markets,1
+Pittsburgh,Poutineries,1
+Pittsburgh,Colombian,1
+Pittsburgh,Empanadas,1
+Pittsburgh,Teppanyaki,1
+Pittsburgh,Aquarium Services,1
+Pittsburgh,Pet Transportation,1
+Pittsburgh,Buses,1
+Pittsburgh,Generator Installation/Repair,1
+Pittsburgh,Hydro-jetting,1
+Pittsburgh,Health Retreats,1
+Pittsburgh,Uniforms,1
+Pittsburgh,Bar Crawl,1
+Pittsburgh,Rafting/Kayaking,1
+Pittsburgh,Climbing,1
+Pittsburgh,Macarons,1
+Pittsburgh,Wholesalers,1
+Pittsburgh,Restaurant Supplies,1
+Pittsburgh,Scuba Diving,1
+Pittsburgh,Snorkeling,1
+Pittsburgh,Diving,1
+Pittsburgh,Baseball Fields,1
+Pittsburgh,Product Design,1
+Pittsburgh,Architectural Tours,1
+Pittsburgh,Golf Equipment,1
+Pittsburgh,Hearing Aid Providers,1
+Pittsburgh,Audiologist,1
+Pittsburgh,Packing Supplies,1
+Pittsburgh,Engraving,1
+Pittsburgh,Career Counseling,1
+Pittsburgh,Business Consulting,1
+Pittsburgh,Hypnosis/Hypnotherapy,1
+Pittsburgh,Hot Tub & Pool,1
+Pittsburgh,Cryotherapy,1
+Pittsburgh,Persian/Iranian,1
+Pittsburgh,Fondue,1
+Pittsburgh,Wills,1
+Pittsburgh,Trusts,1
+Pittsburgh,& Probates,1
+Pittsburgh,Estate Planning Law,1
+Pittsburgh,Kombucha,1
+Pittsburgh,Courthouses,1
+Pittsburgh,Farms,1
+Pittsburgh,Hindu Temples,1
+Pittsburgh,Commercial Truck Dealers,1
+Pittsburgh,Pressure Washers,1
+Pittsburgh,Drywall Installation & Repair,1
+Pittsburgh,Parenting Classes,1
+Pittsburgh,Team Building Activities,1
