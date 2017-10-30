@@ -1,0 +1,728 @@
+state,city,number of restaurants per city
+1,Moss,6
+3,Stetten,1
+ABE,Dudley,1
+AZ,Ahwatukee,5
+AZ,Anthem,22
+AZ,Avondale,164
+AZ,Carefree,26
+AZ,Cave Creek,82
+AZ,Central City,1
+AZ,Central City Village,1
+AZ,Chandler,789
+AZ,El Mirage,23
+AZ,Fort McDowell,6
+AZ,Fountain Hills,74
+AZ,Gelndale,1
+AZ,Gilbert,496
+AZ,Glendale,636
+AZ,Glendale Az,1
+AZ,Goodyear,162
+AZ,Guadalupe,6
+AZ,Higley,5
+AZ,Laveen,33
+AZ,Laveen Village,3
+AZ,Litchfield Park,43
+AZ,Mesa,1093
+AZ,Mesa AZ,1
+AZ,North Scottsdale,1
+AZ,Paradise Valley,29
+AZ,Peoria,329
+AZ,Pheonix,2
+AZ,Pheonix AZ,1
+AZ,Phoenix,3515
+AZ,Phoenix Valley,1
+AZ,Phx,1
+AZ,Roosevelt,3
+AZ,San Tan Valley,15
+AZ,Schottsdale,1
+AZ,Scottdale,2
+AZ,Scottsdale,1414
+AZ,South Mountain,1
+AZ,Sun City,43
+AZ,Sun City West,12
+AZ,Sun Lakes,9
+AZ,Surprise,202
+AZ,Tempe,926
+AZ,tempe arizona,1
+AZ,Tolleson,30
+AZ,Youngtown,8
+BW,Aichwald,2
+BW,Berg,1
+BW,Bernhausen,1
+BW,B̦blingen,74
+BW,Denkendorf,2
+BW,Ditzingen,15
+BW,Esslingen,74
+BW,Esslingen am Neckar,13
+BW,Fellbach,63
+BW,Filderstadt,31
+BW,Freiberg,1
+BW,Gerlingen,22
+BW,Hemmingen,1
+BW,Hochdorf,4
+BW,Kernen,7
+BW,Kernen im Remstal,3
+BW,Kernen-Stetten,1
+BW,Korntal-M�_nchingen,5
+BW,Kornwestheim,20
+BW,Leinfelden-Echterdingen,48
+BW,Leonberg,34
+BW,Ludwigsburg,111
+BW,M̦glingen,4
+BW,Neuhausen,8
+BW,Ostfildern,35
+BW,Plieningen,1
+BW,Remseck,6
+BW,Remseck am Neckar,3
+BW,Sch̦naich,6
+BW,Schwaikheim,3
+BW,Schwieberdingen,4
+BW,Sindelfingen,77
+BW,Sindelfingen/Eichholz,1
+BW,Steinenbronn,6
+BW,Stuttgart,1038
+BW,Waiblingen,33
+BW,Wolfschlugen,1
+BY,Denkendorf,3
+C,Olivos,23
+CA,Montreal,1
+EDH,City of Edinburgh,2
+EDH,Currie,1
+EDH,Edimbourg,1
+EDH,Edinburgh,1365
+EDH,Glasgow,1
+EDH,Juniper Green,1
+EDH,Leith,2
+EDH,New Town,4
+EDH,Newbridge,1
+EDH,Old Town,5
+EDH,Portobello,1
+EDH,Quartermile,1
+EDH,Queensferry,2
+EDH,Ratho,1
+EDH,South Gyle,1
+EDH,South Queensferry,4
+EDH,Stockbridge,3
+ELN,Aberlady,1
+ELN,Gullane,1
+ELN,Haddington,4
+ELN,Musselburgh,10
+ELN,Prestonpans,2
+ELN,Tranent,1
+ESX,Newhaven,3
+FIF,Dalgety Bay,1
+FIF,Dunfermline,12
+FIF,Glenrothes,3
+FIF,Inverkeithing,2
+FIF,Kirkcaldy,9
+HH,,1
+HLD,Inverness,60
+IL,Camargo,1
+IL,Champaign,378
+IL,Gifford,2
+IL,Homer,2
+IL,Mahomet,21
+IL,Mansfield,1
+IL,Monticello,16
+IL,Ogden,1
+IL,Philo,1
+IL,Rantoul,21
+IL,Saint Joseph,7
+IL,Savoy,14
+IL,St Joseph,1
+IL,Tolono,1
+IL,Tuscola,14
+IL,Urbana,116
+IL,Villa Grove,1
+KHL,Edinburgh,1
+MLN,Balerno,1
+MLN,Bonnyrigg,1
+MLN,Bonnyrigg and Lasswade,1
+MLN,Dalkeith,8
+MLN,Edinburgh,68
+MLN,Gorebridge,1
+MLN,Lasswade,2
+MLN,Loanhead,1
+MLN,Musselburgh,1
+MLN,Penicuik,8
+NC,Belmont,44
+NC,Catawba Springs,1
+NC,Charlotte,2327
+NC,Concord,247
+NC,Concord Mills,3
+NC,Cornelius,93
+NC,Cramerton,9
+NC,Dallas,14
+NC,Davidson,28
+NC,Fairview,10
+NC,Gastonia,164
+NC,Harrisbug,1
+NC,Harrisburg,45
+NC,Huntersville,133
+NC,Indian land,1
+NC,Indian Trail,67
+NC,Kannapolis,65
+NC,Lake Park,1
+NC,Lowell,7
+NC,Lowesville,2
+NC,Mattews,1
+NC,Matthews,179
+NC,McAdenville,1
+NC,Midland,6
+NC,Mint  Hill,1
+NC,Mint Hill,26
+NC,Mount Holly,21
+NC,Paw Creek,1
+NC,Pineville,56
+NC,Ranlo,1
+NC,Stallings,11
+NC,Stanley,9
+NC,Stoney Creek,2
+NC,Waxhaw,40
+NC,Weddington,1
+NC,Wesley Chapel,7
+NI,Hemmingen,8
+NV,Blue Diamond,2
+NV,Boulder City,54
+NV,Clark,1
+NV,Enterprise,2
+NV,Green Valley,1
+NV,Henderson,792
+NV,Las  Vegas,3
+NV,Las Vegas,5685
+NV,LasVegas,1
+NV,N Las Vegas,6
+NV,N. Las Vegas,2
+NV,Nellis AFB,6
+NV,Nellis Air Force Base,1
+NV,North Las Vegas,312
+NV,Paradise,6
+NV,South Las Vegas,3
+NV,Spring Valley,4
+NV,Summerlin South,1
+NV,Topaz,1
+NY,Champlain,3
+NY,Churubusco,1
+NY,Mooers,1
+NY,Rouses Point,6
+NYK,Whitby,12
+OH,Amherst,35
+OH,Auburn Township,1
+OH,Auburn Twp,1
+OH,Aurora,39
+OH,Avon,53
+OH,Avon Lake,44
+OH,Bainbridge,4
+OH,Bainbridge Township,1
+OH,Bath,1
+OH,Bay Village,12
+OH,Beachwood,60
+OH,Bedford,28
+OH,Bedford Heights,4
+OH,Bedford Hts.,1
+OH,Berea,32
+OH,Bratenahl,2
+OH,Brecksville,25
+OH,Brimfield,1
+OH,Broadview Heights,41
+OH,Brook Park,24
+OH,Brooklyn,28
+OH,Brookpark,3
+OH,Brunswick,61
+OH,Brunswick Hills,1
+OH,Burton,8
+OH,Chagrin Falls,52
+OH,Chardon,26
+OH,Chesterland,20
+OH,Cleveland,1292
+OH,Cleveland Heights,65
+OH,Cleveland Hghts.,1
+OH,Columbia Station,6
+OH,Concord,4
+OH,Concord Twp,1
+OH,Copley,10
+OH,Cuyahoga Falls,121
+OH,Cuyahoga Fls,1
+OH,East Cleveland,3
+OH,Eastlake,22
+OH,Elyria,71
+OH,Euclid,39
+OH,Fairlawn,40
+OH,Fairport Harbor,4
+OH,Fairview Park,24
+OH,Garfield Heights,17
+OH,Gates Mills,1
+OH,Grafton,8
+OH,Grand River,2
+OH,Highland Heights,13
+OH,Hinckley,1
+OH,Hiram,1
+OH,Hudson,51
+OH,Independence,45
+OH,Kent,98
+OH,Kirtland,7
+OH,Lagrange,3
+OH,Lakewood,158
+OH,Litchfield,3
+OH,Lorain,42
+OH,Lyndhurst,32
+OH,Macedonia,37
+OH,Mantua,7
+OH,Maple Heights,16
+OH,Mayfield,3
+OH,Mayfield Heights,45
+OH,Mayfield Village,5
+OH,Medina,93
+OH,Medina Township,2
+OH,Mentor,157
+OH,Mentor On the,2
+OH,Mentor On the Lake,3
+OH,Mentor-on-the-Lake,9
+OH,Middleburg Heights,32
+OH,Middlefield,16
+OH,Montrose,1
+OH,Moreland Hills,4
+OH,Munroe Falls,8
+OH,N Ridgeville,1
+OH,N. Olmsted,1
+OH,Newbury,8
+OH,North Olmstead,2
+OH,North Olmsted,101
+OH,North Randall,3
+OH,North Ridgeville,28
+OH,North Royalton,46
+OH,Northfield,39
+OH,Northfield Center,1
+OH,Olmsted Falls,17
+OH,Olmsted Township,3
+OH,Orange,1
+OH,Orange Village,2
+OH,Painesville,46
+OH,Parma,91
+OH,Parma Heights,18
+OH,Peninsula,5
+OH,Pepper Pike,3
+OH,Richfield,14
+OH,Richmond Heights,6
+OH,Richmond Hts,1
+OH,Rocky River,66
+OH,Russell,1
+OH,Sagamore Hills,2
+OH,Seven Hills,11
+OH,Shaker Heights,18
+OH,Sheffield,2
+OH,Sheffield Lake,7
+OH,Sheffield Village,10
+OH,Solon,72
+OH,South Amherst,1
+OH,South Euclid,25
+OH,Stow,77
+OH,Streetsboro,40
+OH,Strongsville,108
+OH,Tallmadge,21
+OH,Tremont,1
+OH,Troy Township,1
+OH,Twinsburg,43
+OH,University Heights,14
+OH,Valley City,6
+OH,Valley View,12
+OH,Walton Hills,1
+OH,Warrensvile Heights,1
+OH,Warrensville Heights,13
+OH,Warrensville Hts.,1
+OH,West Akron,1
+OH,Westlake,117
+OH,Wickliffe,25
+OH,Willoughby,92
+OH,Willoughby Hills,13
+OH,Willowick,21
+OH,Woodmere,18
+OH,Woodmere Village,1
+ON,AGINCOURT,1
+ON,Ajax,130
+ON,Aurora,99
+ON,Bathurst Quay,1
+ON,Beeton,4
+ON,Bolton,21
+ON,Bradford,15
+ON,Bradford West Gwillimbury,12
+ON,Brampton,433
+ON,Brooklin,4
+ON,Caledon,10
+ON,Caledon East,3
+ON,Caledon Village,1
+ON,Centre Island,1
+ON,Clarkson,1
+ON,Concord,33
+ON,Don Mills,1
+ON,East Gwillimbury,11
+ON,East York,48
+ON,Etobicoke,257
+ON,Georgetown,28
+ON,Goodwood,1
+ON,Inglewood,1
+ON,King,5
+ON,King City,7
+ON,Kleinburg,4
+ON,Malton,1
+ON,Maple,23
+ON,Markham,708
+ON,Missisauga,4
+ON,Mississauga,1228
+ON,Mississuaga,1
+ON,Mount Albert,6
+ON,Newmarket,165
+ON,Nobleton,3
+ON,North Toronto,1
+ON,North York,404
+ON,Oak Ridges,1
+ON,Oakville,301
+ON,Pickering,131
+ON,Port Credit,2
+ON,Regional Municipality of York,1
+ON,Rexdale,4
+ON,Richmond Hil,1
+ON,Richmond Hill,425
+ON,Ridgeville,1
+ON,River Drive Park,1
+ON,Scarborough,450
+ON,Scaroborough,1
+ON,Scarobrough,1
+ON,Schomberg,5
+ON,Stouffville,24
+ON,Streetsville,1
+ON,Thorncliffe Park,1
+ON,Thornhil,1
+ON,Thornhill,136
+ON,Toronto,6752
+ON,Tottenham,1
+ON,Unionville,20
+ON,Vaughan,381
+ON,Westmount,1
+ON,Whiitby,1
+ON,Whitby,155
+ON,Whitchurch-Stouffville,25
+ON,Whtiby,2
+ON,Willowdale,2
+ON,Woodbridge,80
+ON,York,50
+PA,Allison Park,25
+PA,Ambridge,17
+PA,Arnold,4
+PA,Aspinwall,5
+PA,Avalon,3
+PA,Baldwin,2
+PA,Bellevue,19
+PA,Bellvue,1
+PA,Ben Avon,1
+PA,Bethel Park,42
+PA,Blawnox,2
+PA,Bloomfield,1
+PA,Braddock,5
+PA,Brentwood,6
+PA,Bridgeville,60
+PA,Brookline,1
+PA,Buena Vista,2
+PA,Canonsburd,1
+PA,Canonsburg,66
+PA,Carnegie,33
+PA,Castle Shannon,2
+PA,Cecil,7
+PA,Cheswick,9
+PA,Clairton,8
+PA,clinton,2
+PA,Coraopolis,68
+PA,Crafton,5
+PA,Creighton,1
+PA,Crescent,1
+PA,Cuddy,2
+PA,Downtown,1
+PA,Dravosburg,4
+PA,East Liberty,1
+PA,East Mc Keesport,2
+PA,East McKeesport,1
+PA,East Pittsburgh,2
+PA,Edgewood,1
+PA,Elizabeth,16
+PA,Elizabeth Township,1
+PA,Elrama,1
+PA,Emsworth,3
+PA,Etna,4
+PA,Finleyville,5
+PA,Forest Hills,3
+PA,Fox Chapel,1
+PA,Frazer,17
+PA,Gibsonia,37
+PA,Glassport,4
+PA,Glenshaw,16
+PA,Green Tree,1
+PA,Hampton Township,5
+PA,Harmarville,1
+PA,Harrison City,4
+PA,Harwick,1
+PA,Heidelberg,4
+PA,Hendersonville,1
+PA,Herminie,2
+PA,Homestead,35
+PA,Houston,5
+PA,Imperial,9
+PA,Indianola,1
+PA,Irwin,53
+PA,Jefferson Hills,5
+PA,Kennedy Township,1
+PA,Lawrence,1
+PA,Leetsdale,4
+PA,Liberty,1
+PA,Library,3
+PA,Linden,1
+PA,Lower Burrell,5
+PA,Lower Lawrenceville,1
+PA,Mc Donald,1
+PA,Mc Kees Rocks,11
+PA,Mc Murray,5
+PA,McCandless,1
+PA,McCandless Township,2
+PA,McDonald,1
+PA,McKees Rocks,25
+PA,McKeesport,28
+PA,McKnight,1
+PA,McMurray,22
+PA,Millvale,4
+PA,Monongahela,10
+PA,Monroeville,109
+PA,Moon,5
+PA,Moon Township,7
+PA,Moon Twp,2
+PA,Morgan,1
+PA,Mount Lebanon,8
+PA,Mount Washington,1
+PA,Mt. Lebanon,3
+PA,Mt. Oliver Boro,1
+PA,Munhall,9
+PA,Murrysville,31
+PA,Neville Island,1
+PA,New Eagle,2
+PA,New Kensington,33
+PA,North Huntingdon,16
+PA,North Huntington,1
+PA,North Versailles,19
+PA,Northside,1
+PA,Nottingham,1
+PA,Oakdale,13
+PA,Oakland,2
+PA,Oakmont,18
+PA,Penn Hills,11
+PA,Peters Township,2
+PA,Pitcairn,1
+PA,Pittsburgh,2089
+PA,Pleasant Hills,12
+PA,Plum,9
+PA,Presto,1
+PA,Regent Square,1
+PA,Rillton,1
+PA,Robinson,1
+PA,Robinson Township,10
+PA,Robinson Twp.,1
+PA,Ross,1
+PA,Ross Township,3
+PA,Rural Ridge,1
+PA,Russellton,2
+PA,Sewickley,32
+PA,Shadyside,1
+PA,Shaler Township,2
+PA,Sharpsburg,3
+PA,South Park,5
+PA,South Park Township,2
+PA,Spring Hill City View,1
+PA,Springdale,8
+PA,Squirrel Hill,1
+PA,Stowe,2
+PA,Stowe Township,1
+PA,Swissvale,3
+PA,Trafford,11
+PA,Turtle Creek,8
+PA,Upper Saint Clair,3
+PA,Upper St Clair,2
+PA,Venetia,1
+PA,Verona,16
+PA,West Elizabeth,1
+PA,West Homestead,6
+PA,West Mifflin,37
+PA,West View,3
+PA,Wexford,58
+PA,White Oak,13
+PA,Wilkins Township,1
+PA,Wilkinsburg,3
+PA,Wilmerding,5
+PKN,Edinburgh,1
+QC,Anjou,7
+QC,Baie-D'urfe,1
+QC,Beaconsfield,7
+QC,Beauharnois,1
+QC,Beloeil,3
+QC,Blainville,4
+QC,Bois-Des-Filion,1
+QC,Boisbriand,13
+QC,Boucherville,20
+QC,Brossard,103
+QC,Candiac,3
+QC,Chambly,8
+QC,Charlemagne,1
+QC,Chatauguay,1
+QC,Chateauguay,16
+QC,Chertsey,1
+QC,"Chomedey, Laval",1
+QC,Communaut̩-Urbaine-de-Montr̩al,1
+QC,Cote Saint-Luc,2
+QC,Cote-Saint-Luc,2
+QC,Delson,4
+QC,Dollard-Des Ormeaux,2
+QC,Dollard-des-Ormeaux,75
+QC,Dorval,39
+QC,Est̩rel,1
+QC,Fabreville,1
+QC,Farnham,1
+QC,Godmanchester,1
+QC,Greenfield Park,8
+QC,Hemmingford,1
+QC,Hudson,7
+QC,Huntingdon,1
+QC,�_le-des-Soeurs,1
+QC,Joliette,3
+QC,Kahnawake,3
+QC,Kirkland,19
+QC,L'assomption,1
+QC,L'�_le-Bizard,2
+QC,L'ile-Perrot,10
+QC,La Baie,2
+QC,La Prairie,11
+QC,La Salle,3
+QC,Lachenaie,2
+QC,Lachine,25
+QC,Lachute,2
+QC,Lacolle,1
+QC,Lasalle,42
+QC,Laval,229
+QC,Lavaltrie,1
+QC,Longueuil,38
+QC,Maple Grove,1
+QC,Mascouche,2
+QC,McMasterville,1
+QC,Mercier,1
+QC,Mirabel,1
+QC,Mont-Royal,9
+QC,Mont-Saint-Gregoire,3
+QC,Mont-Saint-Hilaire,7
+QC,Mont̩al,1
+QC,Montr̩al,3215
+QC,Montreal-Nord,4
+QC,Montreal-Ouest,2
+QC,Montreal-West,3
+QC,Morin-Heights,2
+QC,Mount Royal,1
+QC,Napierville,1
+QC,Noyan,1
+QC,Oka,1
+QC,Old Port of Montreal,1
+QC,Ormstown,1
+QC,Outremont,25
+QC,Piedmont,1
+QC,Pierrefonds,31
+QC,Pincourt,1
+QC,Pointe-Aux-Trembles,3
+QC,Pointe-Claire,46
+QC,Pr̩vost,2
+QC,Rawdon,2
+QC,Repentigny,4
+QC,Rigaud,3
+QC,Rosemere,13
+QC,Saint Laurent,4
+QC,Saint Leonard,1
+QC,Saint-Basile-Le-Grand,1
+QC,Saint-Bruno,1
+QC,Saint-Bruno-de-Montarville,3
+QC,Saint-Constant,2
+QC,Saint-Eustache,10
+QC,Saint-Henri,1
+QC,Saint-Hubert,15
+QC,Saint-Hyacinthe,6
+QC,Saint-Jean-sur-Richelieu,17
+QC,Saint-Jerome,15
+QC,Saint-Lambert,18
+QC,Saint-Laurent,69
+QC,Saint-Lazare,3
+QC,Saint-Leonard,17
+QC,Saint-Marc-Sur-Richelieu,2
+QC,Saint-Pierre-de-V̩ronne-��-Pike-River,1
+QC,Saint-Roch-De-L'achigan,1
+QC,Saint-Sauveur,39
+QC,Saint-Sauveur-des-Monts,2
+QC,Sainte-Adele,5
+QC,Sainte-Anne-de-Bellevue,11
+QC,Sainte-Catherine,2
+QC,Sainte-Doroth̩e,1
+QC,Sainte-Genevieve,1
+QC,Sainte-Julie,10
+QC,Sainte-Madeleine,1
+QC,Sainte-Marguerite-du-Lac-Masson,1
+QC,Sainte-Marie,1
+QC,Sainte-Marthe,1
+QC,Sainte-Therese,9
+QC,Sainte-Th̩r̬se-de-Blainville,1
+QC,Salaberry-De-Valleyfield,4
+QC,St Leonard,1
+QC,St-Benǫt de Mirabel,1
+QC,St-Bruno-de-Montarville,1
+QC,St-Jerome,1
+QC,St-Laurent,1
+QC,St-Lazare-de-Vaudreuil,1
+QC,St-Leonard,2
+QC,Ste-Adele,1
+QC,Ste-Rose,1
+QC,Ste-Therese-de-Blainville,1
+QC,Terrebonne,9
+QC,Vanier,1
+QC,Vaudreuil-Dorion,26
+QC,Verdun,83
+QC,Vimont,3
+QC,Westmount,37
+RCC,Whitby,1
+SC,Fort  Mill,1
+SC,Fort Mill,161
+SC,Ft. Mill,1
+SC,Indian Land,12
+SC,Indian Lands,1
+SC,Lake Wylie,13
+SC,Tega Cay,12
+ST,Freyburg,4
+WA,chandler,1
+WHT,Saint-sauveur,1
+WI,Belleville,8
+WI,Black Earth,2
+WI,Brooklyn,2
+WI,Cottage Grove,11
+WI,Cross Plains,11
+WI,Dane,2
+WI,De Forest,13
+WI,DeForest,8
+WI,Fitchburg,59
+WI,Hawthorne,1
+WI,Madison,986
+WI,Mc Farland,8
+WI,McFarland,9
+WI,Middleton,108
+WI,Monona,50
+WI,Mount Horeb,20
+WI,Oregon,23
+WI,Paoli,2
+WI,Shorewood Hills,1
+WI,Springfield,1
+WI,Stoughton,36
+WI,Sun Prairie,69
+WI,Verona,33
+WI,Waunakee,19
+WI,Windsor,4
+WLN,Livingston,18
+XGL,Edinburgh,1
+ZET,Edinburgh,1
