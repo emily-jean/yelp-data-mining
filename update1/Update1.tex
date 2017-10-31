@@ -4,7 +4,6 @@
 \usepackage{amsmath}
 \usepackage{marvosym}
 \usepackage{graphicx}
-\usepackage{subfig}
 \graphicspath{ {images/} }
 \everymath{\displaystyle}
 
@@ -24,7 +23,8 @@ As stated in our proposal, we look to address the following to questions:
 (2) What neighborhoods in Pittsburgh have the best cuisine selection? Are there some areas that are more authentic, trendy or upscale than others? Based upon reviews of the top restaurants in Pittsburgh, can we recommend restaurants to a user?
 
 \section*{2. Methods}
-\subsection*{2.1 Exploratory analysis}
+
+\subsection*{2.1 Data Collection and Transformation}
 With the Yelp Open Dataset\footnote{\url{https://www.yelp.com/dataset}} consisting of 4.7 million reviews, 156,000 business, and 12 metropolitan areas, we needed to filter out a signification amount of data and perform some further exploration in order to set potential thresholds to either include or exclude some data.\\
 To get started, we created local databases and imported the given SQL file using MySQL Server and PyCharm in our development environment. This allowed us to begin writing queries in order to better understand our dataset and possibly explore other questions. From here, we narrowed down and verified what attributes we wanted to use in order to help answer our original questions.  Using Jupyter Notebooks, we have created some basic visualizations and calculations in order to better filter, preprocess, and understand our data.\\
 
@@ -34,22 +34,19 @@ Yelp Data Schema\\
 \includegraphics[width=80mm,scale=0.5]{schema}\\
 \end{center}
 
+\subsection*{2.2 Exploratory - Reviews}
 
-\subsection*{2.2 Extraction}
+\subsection*{2.3 Exploratory - Pittsburgh Restaurants}
 
-Since Boston didn't appear to be in the data set, we first did some analysis on what other city we'd like to chose to perform the same data mining techniques on. We decided to choose Pittsburgh due to the number of restaurants (2089), the significant number of neighborhoods (53 - this includes a category of NULL for restaurants that do not have a neighborhood label), and the variety of cuisines (43 different cuisines).
-
-
-
+   Since Boston didn't appear to be in the data set, we first performed some analysis on what other city we'd like to look at in order to perform clustering and recommendation on.
+   
 \begin{center}
 \includegraphics[width=70mm,scale=0.5]{states}
 \includegraphics[width=80mm,scale=0.5]{cities}
 \end{center}
+   
+After running some queries and looking at the cities and states with the most restaurants, we decided to choose Pittsburgh due to the number of restaurants (2089), the significant number of neighborhoods (53), and the variety of cuisines (43 different cuisines). Although Phoenix and Las Vegas had more restaurants, Phoenix had no neighborhoods and Las Vegas had fewer neighborhoods. Interestingly enough, Pittsburgh only had 4 restaurants labeled as touristy, so we will look to see if there are particular neighborhoods that are more 'upscale' or 'divey', rather than authentic and touristy.
 
-\begin{center}
-List of categories/cuisines: \\
-\includegraphics[width=30mm,scale=0.5]{cuisines}\\
-\end{center}
 
 
 In order to get a better idea of the restaurants within Pittsburgh, we created a simple visualization which plots the latitude and longitude of every restaurant.
@@ -59,16 +56,18 @@ Map of Pittsburgh Restaurants \\
 \includegraphics[width=100mm,scale=0.5]{PittsburghRestaurants}\\
 \end{center}
 
-Although interesting, this doesn't tell us too much other than it appears to be very dense around the middle of the city. Our heat map of restaurant density and the most popular restaurants in Pittsburgh do show that a lot of the neighborhoods in the center of the city are more popular.
+Although interesting, this doesn't tell us too much other than it appears to be very dense around the middle of the city. Our heat map of restaurant density and the most popular restaurants in Pittsburgh (shown left and right respectively) do show that a lot of the neighborhoods in the center of the city are more popular.
 
 \begin{center}
-Heatmap of Restaurant Density \\
-\includegraphics[width=80mm,scale=0.5]{pa_rest_density}\\
+\includegraphics[width=70mm,scale=0.5]{pa_rest_density}
+\includegraphics[width=70mm,scale=0.5]{pa_popular_restaurants}
 \end{center}
 
+From here, we decided to further explore the Pittsburgh neighborhoods and first discover the top 10 neighborhoods with the most restaurants. Following this, this lead to creating a map of the top 10 neighborhoods with the highest average review count. In other words, we were curious what neighborhoods are the most popular among Yelp reviewers.
+
 \begin{center}
-Most popular restaurants in Pittsburgh \\
-\includegraphics[width=80mm,scale=0.5]{pa_popular_restaurants}\\
+\includegraphics[width=70mm,scale=0.5]{pitts_hoods_most_restaurants}
+\includegraphics[width=70mm,scale=0.5]{top_10_most_popular_neighborhoods}
 \end{center}
 
 
