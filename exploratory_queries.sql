@@ -53,6 +53,24 @@ select business.id, business.name, business.city, business.state, business.revie
   order by business.review_count desc
   limit 50;
 
+-- get all of the restaurants in Pittsburgh
+select business.id, business.name, business.neighborhood, business.latitude, business.longitude, business.review_count
+  from business
+  inner join category on business.id = category.business_id
+  where business.city = 'Pittsburgh'
+  and category.category = 'Restaurants'
+  group by business.id
+  order by business.neighborhood ASC;
+
+-- count the # of Pittsburgh restaurants by neighborhood
+select business.neighborhood,
+  COUNT(*) AS 'Restaurants by Neighborhood'
+  from business
+  inner join category on business.id = category.business_id
+  where business.city = 'Pittsburgh'
+  and category.category = 'Restaurants'
+  group by business.neighborhood
+  order by COUNT(*) DESC;
 
 select business.id, business.name, business.neighborhood,
   business.city, business.state, category.category, attribute.value, attribute.name from business
