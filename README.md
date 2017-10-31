@@ -14,8 +14,9 @@
     - Import the yelp-data-mining project into PyCharm by navigating to dataset, Right click on the yelp_db.sql file and click Run. This will take about an hour to run on your machine
     
 2. Running jupyter notebook:
-    - Install pymysql from your terminal (sudo pip install PyMySQL)
+    - Install pymysql from your terminal (sudo pip install PyMySQL. If anaconda installed, launch it, go to env, click the arrow next to root, open terminal and run the commands here)
     - Install sqlalchemy from command line (sudo pip install sqlalchemy)
     - Install pandas
     - Install nltk
+    - Install folium
 

@@ -16,100 +16,51 @@
 \begin{document}
 
 \section*{1. Problem Statement and Background}
+As stated in our proposal, we look to address the following to questions:\\
 
+(1) What topics are discovered frequently in reviews and do they correlate to a positive or negative re- view? What should a restaurant focus on to make their rating/reviews better? \\
+
+(2) What neighborhoods in Pittsburgh have the best cuisine selection? Are there some areas that are more authentic or trendy than others? Based upon reviews of the top restaurants in Pittsburgh, can we recommend restaurants to a user?
 
 \section*{2. Methods}
 \subsection*{2.1 Exploratory analysis}
-With the Yelp Open Dataset\footnote{\url{https://www.yelp.com/dataset}} consisting of 4.7 million reviews, 156,000 business, and 12 metropolitan areas, we needed to filter out a signification amount of data and perform some further exploration in order to set potential thresholds to either include or exclude particular data. Below is the Yelp Dataset schema.
+With the Yelp Open Dataset\footnote{\url{https://www.yelp.com/dataset}} consisting of 4.7 million reviews, 156,000 business, and 12 metropolitan areas, we needed to filter out a signification amount of data and perform some further exploration in order to set potential thresholds to either include or exclude some data.\\
+First, we narrowed down and verified what attributes we wanted to use in order to help answer our original questions. To get started, we created local databases and imported the given SQL file using MySQL Server and PyCharm in our development environment. This allowed us to begin writing queries in order to better understand our dataset and possibly explore other questions. Using Jupyter Notebooks, we have created some basic visualizations and calculations in order to better filter and preprocess our data.\\
+
+Below is the Yelp Dataset schema.
 
 \begin{center}
 Yelp Data Schema\\
-\includegraphics[width=150mm,scale=0.5]{schema}\\
+\includegraphics[width=80mm,scale=0.5]{schema}\\
 \end{center}
 
-In order to answer our original questions, we had to narrow down and verify what attributes we needed from our data set.\\
 
-The following tables are used to answer question 1:\\
+\subsection*{2.2 Extraction}
+
+Since Boston didn't appear to be in the data set, we first did some analysis on what other city we'd like to chose to perform the same data mining techniques on. We decided to choose Pittsburgh due to the number of restaurants (2089), the significant number of neighborhoods (53 - this includes a category of NULL for restaurants that do not have a neighborhood label), and the variety of cuisines.
 
 \begin{center}
-Business\\
-\begin{tabular}{|l|l|}
-\hline
-id  \\ \hline
-name  \\ \hline
-neighborhood  \\ \hline
-city  \\ \hline
-longitude  \\ \hline
-latitude  \\ \hline
-stars  \\ \hline
-\end{tabular}
+\includegraphics[width=70mm,scale=0.5]{states}\\
 \end{center}
 
 \begin{center}
-Review\\
-\begin{tabular}{|l|l|}
-\hline
-business\_id  \\ \hline
-user\_id  \\ \hline
-stars  \\ \hline
-date  \\ \hline
-text  \\ \hline
-funny  \\ \hline
-useful  \\ \hline
-\end{tabular}
+\includegraphics[width=80mm,scale=0.5]{cities}\\
 \end{center}
 
 \begin{center}
-Tip\\
-\begin{tabular}{|l|l|}
-\hline
-business\_id  \\ \hline
-text  \\ \hline
-likes  \\ \hline
-\end{tabular}
+\includegraphics[width=30mm,scale=0.5]{cuisines}\\
 \end{center}
 
-The following tables are used to answer question two:
+
+List of categories/cuisines: \\
+
+In order to get a better idea of the restaurants within Pittsburgh, we created a simple visualization which plots the latitude and longitude of every restaurant.\\
 
 \begin{center}
-Business\\
-\begin{tabular}{|l|l|}
-\hline
-id  \\ \hline
-name  \\ \hline
-neighborhood  \\ \hline
-city  \\ \hline
-longitude  \\ \hline
-latitude  \\ \hline
-stars  \\ \hline
-\end{tabular}
+Map of Pittsburgh Restaurants \\
+\includegraphics[width=80mm,scale=0.5]{PittsburghRestaurants}\\
 \end{center}
 
-\begin{center}
-Category\\
-\begin{tabular}{|l|l|}
-\hline
-business\_id  \\ \hline
-category  \\ \hline
-\end{tabular}
-\end{center}
-
-
-To get started, we created local databases and imported the given SQL file using MySQL Server and PyCharm in our development environment. Using Jupyter Notebooks, we have created some basic visualizations and calculations in order to better filter and preprocess our data.
-
-\section*{2. Extraction Update}
-Our original questions: \\
-(1) What topics are discovered frequently in reviews and do they correlate to a positive or negative review? What should a restaurant focus on to make their rating/reviews better? \\
-(2) What neighborhoods in Pittsburgh have the best cuisine selection? \\
-
-Number of Pittsburgh neighborhoods: \\
-Number of categories/cuisines: \\
-Categories/cuisines: \\
-
-In order to tell authentic from trendy, we have joined the business, category and attributes table.\\
-
-
-We have picked restaurants with more than 200 reviews:
 
 
 \end{document}
