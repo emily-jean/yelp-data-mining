@@ -72,6 +72,17 @@ select business.neighborhood,
   group by business.neighborhood
   order by COUNT(*) DESC;
 
+-- join business, category and attribute table to find areas that are touristy, upscale, etc.
+select business.id, business.name, business.neighborhood,
+  business.city, category.category, attribute.value, attribute.name
+  from business
+  right join category on business.id = category.business_id
+  left join attribute on category.business_id = attribute.business_id
+  where business.city = 'Pittsburgh'
+  and category.category = 'Restaurants'
+  and attribute.value LIKE '%"touristy": true%'
+  order by business.id desc;
+
 select business.id, business.name, business.neighborhood,
   business.city, business.state, category.category, attribute.value, attribute.name from business
   right join category on business.id = category.business_id
