@@ -19,7 +19,7 @@ connection = pymysql.connect(host='localhost',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
 
-sql = "SELECT review.id,review.text FROM review,business where review.business_id = business.id and business.city = 'Pittsburgh' limit 3;"
+sql = "SELECT review.id,review.text FROM review,business where review.business_id = business.id and business.city = 'Pittsburgh' limit 2;"
 reviews = pd.read_sql(sql,connection).values
 '''
     pip install -U textblob
@@ -33,9 +33,18 @@ for review in reviews:
 
 
 for k,v in reviewsDict.items():
+    print("Review")
+    print(v.raw)
+    print("Review Id: ")
     print(k)
+    print("Polarity: ")
+    print(v.polarity)
+    print("Words: ")
     print(set(v.words)-set(stopwords.words('english')))
+    print("Keywords/nouns: ")
     print(v.noun_phrases)
+    print()
+
 
 
 
