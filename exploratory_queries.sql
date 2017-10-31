@@ -64,7 +64,7 @@ select business.id, business.name, business.neighborhood, business.latitude, bus
 
 -- count the # of Pittsburgh restaurants by neighborhood
 select business.neighborhood,
-  COUNT(*) AS 'Restaurants by Neighborhood'
+  COUNT(*) AS '# restaurants'
   from business
   inner join category on business.id = category.business_id
   where business.city = 'Pittsburgh'
