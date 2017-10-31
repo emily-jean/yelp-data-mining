@@ -45,6 +45,14 @@ select business.id, business.name, business.neighborhood,
   GROUP BY business.id, category.category
   ORDER BY category.category;
 
+-- top 50 most reviews restaurants
+select business.id, business.name, business.city, business.state, business.review_count, business.stars
+  from business
+  inner join category on business.id = category.business_id
+  where category.category = "Restaurants"
+  order by business.review_count desc
+  limit 50;
+
 
 select business.id, business.name, business.neighborhood,
   business.city, business.state, category.category, attribute.value, attribute.name from business
