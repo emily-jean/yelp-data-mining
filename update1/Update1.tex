@@ -26,16 +26,37 @@ As stated in our proposal, we look to address the following to questions:
 
 \subsection*{2.1 Data Collection and Transformation}
 With the Yelp Open Dataset\footnote{\url{https://www.yelp.com/dataset}} consisting of 4.7 million reviews, 156,000 business, and 12 metropolitan areas, we needed to filter out a signification amount of data and perform some further exploration in order to set potential thresholds to either include or exclude some data.\\
-To get started, we created local databases and imported the given SQL file using MySQL Server and PyCharm in our development environment. This allowed us to begin writing queries in order to better understand our dataset and possibly explore other questions. From here, we narrowed down and verified what attributes we wanted to use in order to help answer our original questions.  Using Jupyter Notebooks, we extracted the data from SQL queries and stored them in two Pandas DataFrames, to then be able to create some basic visualizations and calculations in order to better filter, preprocess, and understand our data.\\
+To get started, we created local databases and imported the given SQL file using MySQL Server and PyCharm in our development environment. This allowed us to begin writing queries in order to better understand our dataset and possibly explore other questions. From here, we narrowed down and verified what attributes we wanted to use in order to help answer our original questions.  Using Jupyter Notebooks, we extracted the data from SQL queries and stored them in two Pandas DataFrames, to then be able to create some basic visualizations and calculations in order to better filter, preprocessing, and understand our data.\\
 
 \begin{center}
 Yelp Data Schema\\
-\includegraphics[width=75mm,scale=0.5]{schema}\\
+\includegraphics[width=75mm,scale=0.4]{schema}\\
 \end{center}
 
 \subsection*{2.2 Exploratory Analysis - Reviews}
+To get start on exploratory analysis about reviews along with ratings, we extracted some sample data and visualized some of the statistics of these data. At first, we plot the distribution of rating for all restaurants in Pittsburgh area. From the plot we can find out that most ratings are in the range of 3 to 5. The average rating for restaurants in Pittsburgh is  3.51. To get deeper insight of the data, we plot rating distribution for different cuisine. 
 
-To begin our exploratory analysis on reviews, we calculated the rating for a restaurant by performing sentiment analysis on reviews and comparing the results with the dataset ratings. Sentiment analysis will determine whether the review is positive or negative. We took a sample dataset of all restaurants in Pittsburgh which have more than 200 reviews to assign our own ratings - there are 109 restaurants in Pittsburgh which satisfy our criteria. We do it by computing the average of the values obtained from sentiment analysis of all the reviews (38,785 reviews) of that restaurant. The sentimental analysis is done using PatternAnalyzer in nltk (textblob is built over nltk). We assign a weight of +5 for a positive review and -5 for a negative review. These newly derived ratings are compared with the ratings in original dataset as shown in the histogram. We can assume these reviews to be more accurate because we are incorporating negative weights to low star reviews.
+\begin{center}
+	\includegraphics[width=65mm,scale=0.3]{rating_distribution_in_Pittsburgh}
+	\includegraphics[width=65mm,scale=0.3]{rating_distribution_vs_cuisine}
+\end{center}
+Besides basic distribution, we plotted relationship between the average number of reviews and rating level using box plot. Before we did this, we thought better restaurants should get more reviews. However,  the result is beyond expectation:according to the graph restaurants with medium rating acquire more reviews. 
+\begin{center}
+	\includegraphics[width=65mm,scale=0.3]{number_of_restaurants_vs_rating_level.png}
+\end{center}
+
+We also explore the relationship between average number of reviews, average length of review(after tokenization and stemming ) and each cuisine.It seems in Pittsburgh areas Japanese foods get the most reviews while Chinese foods get the least. However, when it comes to the length of review, it doesn't have many differences among different cuisines. 
+
+\begin{center}
+	\includegraphics[width=65mm,scale=0.3]{number_of_review_vs_cuisine.png}
+	\includegraphics[width=72mm,scale=0.3]{average_review_length.png}
+\end{center}
+
+
+
+
+
+Furthermore, to get more sense on how the contents of review correlate with rating, we calculated the ratings for one of the restaurant by performing sentiment analysis on reviews and comparing the results with dataset ratings. Sentiment analysis will determine whether the review is positive or negative. We took a sample dataset of all restaurants in Pittsburgh which have more than 200 reviews to assign our own ratings - there are 109 restaurants in Pittsburgh which satisfy our criteria. We do it by computing the average of the values obtained from sentiment analysis of all the reviews (38,785 reviews) of that restaurant. The sentimental analysis is done using PatternAnalyzer in nltk (textblob is built over nltk). We assign a weight of +5 for a positive review and -5 for a negative review. These newly derived ratings are compared with the ratings in original dataset as shown in the histogram. We can assume these reviews to be more accurate because we are incorporating negative weights to low star reviews.
 
 \begin{center}
 \includegraphics[width=70mm,scale=0.5]{sentimentanalysis}
@@ -49,7 +70,11 @@ The results are very promising. Few keywords such as "great","good","nice","serv
 \includegraphics[width=70mm,scale=0.5]{top50_positivereviews}
 \end{center}
 
-Although some of our exploratory analysis focused on one city, we expanded our reviews analysis to 3 different cities, each in a different country. The thought here was that there may be differences between different cities such as the service, or people may have different habits using different words. It's possible that the final cluster may be verified by different external evaluation criteria, so we thought it'd be useful to further explore this. \\
+Although some of our exploratory analysis focused on one city, we expanded our reviews analysis to 4 different cities, from 3 different countries. The thought here was that there may be differences between different cities such as the service, or people may have different habits using different words. It's possible that the final cluster may be verified by different external evaluation criteria, so we thought it'd be useful to further explore a little on. For update one, we plot differences of rating habits among 4 cities based on average rating score for each type of cuisine. We can find from the graph that the Edinburgh relatively has the best rating feedback while Toronto seems be left behind.\\
+
+\begin{center}
+	\includegraphics[width=70mm,scale=0.5]{Rating_different_restaurants_countries.png}
+\end{center}
 
 \subsection*{2.3 Exploratory Analysis - Pittsburgh Neighborhoods' Restaurants}
 
@@ -76,11 +101,6 @@ From here, we decided to further explore the Pittsburgh neighborhoods and first 
 \includegraphics[width=70mm,scale=0.5]{pitts_hoods_most_restaurants}
 \includegraphics[width=70mm,scale=0.5]{top_10_most_popular_neighborhoods}
 \end{center}
-
-\section*{3. Next Steps}
-
-\subsection*{3.1 Algorithms}
-
 
 
 
