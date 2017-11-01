@@ -2,7 +2,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{neu_handout}[2017/8/04 NEU Handout Class]
 
-\LoadClass[11pt]{article}
+\LoadClass[10.5pt]{article}
 
 \RequirePackage[margin=0.8in]{geometry}
 \RequirePackage{multirow}
