@@ -33,27 +33,25 @@ Yelp Data Schema\\
 \includegraphics[width=75mm,scale=0.5]{schema}\\
 \end{center}
 
-\subsection*{2.2 Exploratory - Reviews}
+\subsection*{2.2 Exploratory Analysis - Reviews}
 
-To begin our exploratory analysis on reviews, we calculated the rating for a restaurant by performing sentiment analysis on reviews and comparing the results with the dataset ratings. Sentiment analysis will determine whether the review is positive or negative. We took a sample dataset of all restaurants in Pittsburgh which have more than 200 reviews to assign our own ratings - there are 109 restaurants in Pittsburgh which satisfy our criteria. We do it by computing the average of the values obtained from sentiment analysis of all the reviews (38,785 reviews) of that restaurant. The sentiment analysis is done with the library TextBlob. We assign a weight of +5 for a positive review and -5 for a negative review. These newly derived ratings are compared with the ratings in original dataset as shown in the histogram. We can assume these reviews to be more accurate because we are incorporating negative weights to low star reviews.
+To begin our exploratory analysis on reviews, we calculated the rating for a restaurant by performing sentiment analysis on reviews and comparing the results with the dataset ratings. Sentiment analysis will determine whether the review is positive or negative. We took a sample dataset of all restaurants in Pittsburgh which have more than 200 reviews to assign our own ratings - there are 109 restaurants in Pittsburgh which satisfy our criteria. We do it by computing the average of the values obtained from sentiment analysis of all the reviews (38,785 reviews) of that restaurant. The sentimental analysis is done using naivebayesclassifier in nltk (textblob is built over nltk). We assign a weight of +5 for a positive review and -5 for a negative review. These newly derived ratings are compared with the ratings in original dataset as shown in the histogram. We can assume these reviews to be more accurate because we are incorporating negative weights to low star reviews.
+
+\begin{center}
+\includegraphics[width=70mm,scale=0.5]{sentimentanalysis}
+\end{center}
+
+Next, we extracted the top 50 keywords from positive and negative reviews. Again taking a sample dataset of all restaurants in Pittsburgh that have more than 200 reviews. There are a total of 38,785 reviews. Data processing techniques such as tokenizing, filtering, stemming and filtering the key words from those reviews were performed. We then calculated 50 most frequent keywords from the negative and positive reviews separately. Negative and positive reviews were distinguished using the polarity obtained in the previous step.
+The results are very promising. Few keywords such as "great","good","nice","service" came with high frequency in positive reviews where as words like "bad","good","terrible","poor","great" appeared negative reviews and common words like "Pittsburgh","food","service","place" are present in both positive and negative reviews. One important point to notice is that "good" and "great" appeared in negative reviews too in a sense that customers are complaining how the food isn't that good/great. High frequencies of words in positive reviews when compared to negative reviews is because of more number of positive reviews in the corpus.
 
 \begin{center}
 \includegraphics[width=70mm,scale=0.5]{top50_negativereviews}
 \includegraphics[width=70mm,scale=0.5]{top50_positivereviews}
 \end{center}
 
-
-Next, we extracted the top 50 keywords from positive and negative reviews. Again taking a sample dataset of all restaurants in Pittsburgh that have more than 200 reviews. There are a total of 38,785 reviews. Data processing techniques such as tokenizing, filtering, stemming and filtering the key words from those reviews were performed. We then calculated 50 most frequent keywords from the negative and positive reviews separately. Negative and positive reviews were distinguished using the polarity obtained in the previous step.
-The results are very promising. Few keywords such as "great","good","nice","service" came with high frequency in positive reviews where as words like "bad","good","terrible","poor","great" appeared negative reviews and common words like "Pittsburgh","food","service","place" are present in both positive and negative reviews. One important point to notice is that "good" and "great" appeared in negative reviews too in a sense that customers are complaining how the food isn't that good/great. High frequencies of words in positive reviews when compared to negative reviews is because of more number of positive reviews in the corpus.
-
-
-\begin{center}
-\includegraphics[width=70mm,scale=0.5]{sentimentanalysis}
-\end{center}
-
 Although some of our exploratory analysis focused on one city, we expanded our reviews analysis to 3 different cities, each in a different country. The thought here was that there may be differences between different cities such as the service, or people may have different habits using different words. It's possible that the final cluster may be verified by different external evaluation criteria, so we thought it'd be useful to further explore this. \\
 
-\subsection*{2.3 Exploratory - Pittsburgh Restaurants}
+\subsection*{2.3 Exploratory Analysis - Pittsburgh Neighborhoods' Restaurants}
 
    Since Boston didn't appear to be in the data set, we first performed some analysis on what other city we'd like to look at in order to perform clustering and recommendation on.
    
@@ -78,6 +76,12 @@ From here, we decided to further explore the Pittsburgh neighborhoods and first 
 \includegraphics[width=70mm,scale=0.5]{pitts_hoods_most_restaurants}
 \includegraphics[width=70mm,scale=0.5]{top_10_most_popular_neighborhoods}
 \end{center}
+
+\section*{3. Next Steps}
+
+\subsection*{3.1 Algorithms}
+Imple
+
 
 
 \end{document}
