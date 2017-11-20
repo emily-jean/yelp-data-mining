@@ -106,3 +106,35 @@ select business.id,
   GROUP BY business.id
   HAVING categories LIKE '%Restaurants%';
 
+-- specific cuisines. including all restaunrants > 10 cusine/category
+-- excluding things such as barbeque, asian fusion, tex-mex, southern
+-- this includes 17 cuisines.
+select business.id,
+  business.name,
+  business.latitude,
+  business.longitude,
+  business.neighborhood,
+  category.category
+  FROM category
+  inner join business on
+  business.id = category.business_id
+  where business.city ="Pittsburgh"
+  and category.category = "Italian"
+  or category.category = "Chinese"
+  or category.category = "Mexican"
+  or category.category = "American (New)"
+  or category.category = "Mediterranean"
+  or category.category = "Japanese"
+  or category.category = "Thai"
+  or category.category = "Indian"
+  or category.category = "Middle Eastern"
+  or category.category = "Greek"
+  or category.category = "French"
+  or category.category = "Korean"
+  or category.category = "Turkish"
+  or category.category = "Caribbean"
+  or category.category = "Vietnamese"
+  or category.category = "Latin American"
+  or category.category = "Taiwanese"
+  GROUP BY business.id, category.category;
+
