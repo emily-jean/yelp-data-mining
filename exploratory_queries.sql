@@ -92,3 +92,17 @@ select business.id, business.name, business.neighborhood,
 
 select * from review order by review.date limit 10;
 
+
+-- group business categories in Pitts
+select business.id,
+  business.name,
+  business.latitude,
+  business.longitude,
+  GROUP_CONCAT(category.category SEPARATOR ', ') AS categories
+  FROM category
+  inner join business on
+  business.id = category.business_id
+  where business.city ="Pittsburgh"
+  GROUP BY business.id
+  HAVING categories LIKE '%Restaurants%';
+
