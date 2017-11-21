@@ -12,6 +12,18 @@
     - Click the add button, Data Source, MySQL (hostname=localhost, dataname=yelp_db, user=your_desktop_login, password=set_via_terminal). Add Driver (it prompts you for this)
     - Click Test Connection, Click OK
     - Import the yelp-data-mining project into PyCharm by navigating to dataset, Right click on the yelp_db.sql file and click Run. This will take about an hour to run on your machine
+
+*extra steps for RHEL7:
+    - start/stop/restart: service mysql start
+    - /var/lib/mysql/mysql.sock (where socket file is)
+    - nano /etc/my.cnf (may need to modify. add [mysqld] port=3306, protocol=tcp, host=127.0.0.1, skip-name-resolve  [mysql] max_allowed_packet=64M
+    - restart mysql
+    - run systemctl status mysqld.service
+    - run journalctl -xe
+	You can generate a local policy module to allow this a
+          Do allow this access for now by executing:
+		# ausearch -c 'mysqld' --raw | audit2allow -M my-mysql
+                # semodule -i my-mysqld.pp
     
 2. Running jupyter notebook:
     - Install pymysql from your terminal (sudo pip install PyMySQL. If anaconda installed, launch it, go to env, click the arrow next to root, open terminal and run the commands here)
