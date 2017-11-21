@@ -98,6 +98,7 @@ select business.id,
   business.name,
   business.latitude,
   business.longitude,
+  business.city,
   GROUP_CONCAT(category.category SEPARATOR ', ') AS categories
   FROM category
   inner join business on
@@ -114,7 +115,8 @@ select business.id,
   business.latitude,
   business.longitude,
   business.neighborhood,
-  category.category
+  business.city,
+  category.category as categories
   FROM category
   inner join business on
   business.id = category.business_id
