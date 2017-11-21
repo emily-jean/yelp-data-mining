@@ -17,22 +17,31 @@
 
 \section*{1 Introduction and Background}
 Today we live in a society where businesses are greatly impacted by customer reviews. For some businesses, this can greatly impact their success or failure. Looking to improve the
-experience for restaurant owners and customers, we used the Yelp Open Dataset\footnote{\url{https://www.yelp.com/dataset}} that is filled with restaurant reviews of diverse content and topics, along with how their experience was positively or negatively impacted. Through the implementation of several data mining and text mining techniques, we can better understand user reviews and gain new insights. In this project we mine a copious amount of Yelp restaurant reviews to address the following questions: What topics are discovered frequently in reviews and do they correlate to a positive or negative review? What neighborhoods in Pittsburgh have the best cuisine selection? Are there some areas that are more upscale or divey than others? Based upon user reviews in Pittsburgh, can we recommend a particular dish at a top restaurant?
+experience for restaurant owners and customers, we used the Yelp Open Dataset\footnote{\url{https://www.yelp.com/dataset}} that is filled with restaurant reviews of diverse content and topics, along with how a customers experience was positively or negatively impacted. Through the implementation of several data mining and text mining techniques, we can better understand user reviews and gain new insights into neighborhood businesses. In this project we mine a copious amount of Yelp restaurant reviews to address the following questions: What topics are discovered frequently in reviews and do they correlate to a positive or negative review? What neighborhoods, if any, have the best selection for a particular cuisine in a certain city? Are there some areas in a city that are more upscale or divey than others? Based upon user reviews in a particular city, can we recommend a particular dish at a top restaurant?
 
 \subsection*{1.1 The Data}
-The Yelp SQL dataset contains 4.7 million reviews, 156,000 business, and 12 metropolitan areas. The schema\footnote{\url{https://www.yelp.com/dataset/documentation/sql}} consists of multiple tables including information about businesses, reviews, users, checkins and tips. The majority of the project focuses on restaurants in Pittsburgh, PA. Pittsburgh has 2089 restaurants, 53 different neighborhoods, and a diverse cuisine selection (43 different cuisines), thus making it a potentially interesting U.S. city on Yelp. Our heat map of restaurants in Pittsburgh shows that a lot of the neighborhood restaurants in the center of the city are more popular.
+The Yelp SQL dataset contains 4.7 million reviews, 156,000 business, and 12 metropolitan areas. Spanning over 10 years of Yelp reviews and 50 states, including international countries, the dataset provides a countless number of questions to be asked. The schema\footnote{\url{https://www.yelp.com/dataset/documentation/sql}} consists of multiple tables including information about businesses, reviews, users, checkins and tips. Since we are familiar with Boston neighborhoods and its cuisines, we wanted to find a city that we thought may have some of the same characteristics. For example, the North End in Boston is known for its Italian food and South Boston is famous for it's Irish heritage and pubs. Since Boston is not in this dataset, the majority of the project focuses on restaurants in Pittsburgh, PA, due to its relatively similar characteristics. Although it has the neighborhood Bloomfield which is equivalent to our Italian North End, it's 
+
+As seen in Figure 1, Pittsburgh is one of the leading cities with respect to its number of restaurants and has many restaurants within close proximity of one another as seen in Figure 2. The heat map of restaurants in Pittsburgh shows that a lot of the neighborhood restaurants in the center of the city are more popular.
 
 \begin{center}
 \includegraphics[width=90mm,scale=0.5]{cities}
 \includegraphics[width=75mm,scale=0.5]{pa_popular_restaurants}
 \end{center}
 
-To answer our questions, we performed data analysis and unsupervised machine learning techniques such as clustering, topic modeling and recommendation. For understanding and reproducibility, the project repository and development environment set up instructions can be found on Github\footnote{\url{https://github.com/emily-jean/yelp-data-mining}}. 
+Pittsburgh has 2089 restaurants, 53 different neighborhoods, and a diverse cuisine selection (43 different cuisines), which made it an interesting U.S. city to us.
+
+The team setup local databases using PyCharm and MySQLServer in order to run faster queries. For understanding and reproducibility, the project repository and development environment set up instructions can be found on Github\footnote{\url{https://github.com/emily-jean/yelp-data-mining}}.
+
+
+\subsection*{1.2 Methods}
+
+To answer our questions, we performed data analysis and unsupervised machine learning techniques such as clustering, topic modeling and recommendation. With respect to language processing, tokenization, filtering, lemmatization, and stemming were all used for preprocessing the reviews. To tell if a customer has positive or negative feedback about a restaurant, sentimental analysis was performed in order to see if there is an interesting difference between reviews and ratings although a review is associated with a rating.
+
 
 \section*{2. Exploratory Analysis}
 
-
-To better visualize and explore the Pittsburgh neighborhoods a bit more, we discovered the top 10 neighborhoods with the most restaurants. The map shows the top 10 neighborhoods with the highest average review count to give some insight as to what neighborhoods are the most popular among Yelp reviewers.
+To better visualize and explore the Pittsburgh neighborhoods a bit more, we discovered the top 10 neighborhoods with the most restaurants. Looking at other outside articles\footnote{url{https://www.thrillist.com/eat/pittsburgh/best-neighborhoods-in-pittsburgh-for-dining-and-eating-out-ranked}}, every one of these neighborhoods are listed as one of the "Best Neighborhoods for Eating" except for Oakland. The second map on the right shows the top 10 neighborhoods with the highest average review count to give some insight as to what neighborhoods are the most popular among Yelp reviewers. In comparison to the Thrillest article, only Lawrenceville, Regent Square, Shadyside, and the Strip District are on their list.
 
 \begin{center}
 \includegraphics[width=75mm,scale=0.5]{pitts_hoods_most_restaurants}

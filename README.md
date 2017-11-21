@@ -30,6 +30,7 @@
     - Install pymysql from your terminal (sudo pip install PyMySQL. If anaconda installed, launch it, go to env, click the arrow next to root, open terminal and run the commands here)
     - Install sqlalchemy from command line (sudo pip install sqlalchemy)
     - Install pandas
-    - Install nltk
-    - Install folium
+    - Install nltk (run python, import nltk nltk.download())
+    - Install folium (conda install -c ioos folium)
+    - Install mysqlconnection
 
