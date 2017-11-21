@@ -7,7 +7,6 @@
 
 import pymysql
 import pandas as pd
-from gensim import utils
 from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import stopwords
 import gensim
@@ -35,28 +34,17 @@ def print_time():
 
 
 def train_models(topics, words):
-    print("Training the models........ \n")
-
-    print("Latent Semantic Analysis......")
-    lsi = models.LsiModel(doc_term_matrix, id2word=dictionary, num_topics=topics)
-    print_time()
 
     print("Latent Dirichlet Allocation......")
-    lda = models.LdaModel(doc_term_matrix, id2word=dictionary, num_topics=topics, passes=20, iterations=50)
+    lda = models.LdaModel(doc_term_matrix, id2word=dictionary, alpha='auto', num_topics=topics, passes=20, iterations=50)
     print_time()
 
-    print("Hierarchical Dirichlet Process......")
-    hdp = models.HdpModel(doc_term_matrix, id2word=dictionary, T=topics)
-    print_time()
-
-    print_topics(lsi,lda,hdp,topics,words)
+    print_topics(lda,topics,words)
     print_time()
 
 
-def print_topics(lsi,lda,hdp,topics,words):
-    print(lsi.print_topics(-1, words))
+def print_topics(lda,topics,words):
     print(lda.print_topics(-1, words))
-    print(hdp.print_topics(-1, words))
 
     lda_vis = pyLDAvis.gensim.prepare(lda, doc_term_matrix, dictionary)
     # pyLDAvis.display(lda_vis)
@@ -104,4 +92,4 @@ processed_corpus = [[token for token in text if frequency[token] > 10] for text 
 dictionary = corpora.Dictionary(processed_corpus)
 doc_term_matrix = [dictionary.doc2bow(doc) for doc in processed_corpus]
 
-train_models(10, 3)
+train_models(100, 3)
