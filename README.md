@@ -24,6 +24,7 @@
           Do allow this access for now by executing:
 		# ausearch -c 'mysqld' --raw | audit2allow -M my-mysql
                 # semodule -i my-mysqld.pp
+    - SELECT User, Host FROM mysql.user; (run in mysql)
     
 2. Running jupyter notebook:
     - Install pymysql from your terminal (sudo pip install PyMySQL. If anaconda installed, launch it, go to env, click the arrow next to root, open terminal and run the commands here)
