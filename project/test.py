@@ -93,3 +93,8 @@ dictionary = corpora.Dictionary(processed_corpus)
 doc_term_matrix = [dictionary.doc2bow(doc) for doc in processed_corpus]
 
 train_models(100, 3)
+
+
+"""
+    Test push
+"""
