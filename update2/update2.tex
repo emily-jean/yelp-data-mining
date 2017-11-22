@@ -89,7 +89,7 @@ Although some of our exploratory analysis focused on one city, we expanded our r
 \end{center}
 
 \section*{3 Data Mining Analysis}
-
+\subsection*{3.1 Geographic Based Clustering}
 To find what cuisines may lie in particular neighborhoods in Pittsburgh, we performed two clustering techniques: K-Means++ and GMM. In order to do this, we decided to look at the closeness and similarities of the restaurants by using the longitude and latitude which considered cluster closeness, as well as the category/cuisines to cluster for similarity. During the data exploration, we intentionally dug into all the types of categories, realizing that we would want to filter out other non-restaurant businesses as well as things such as 'cafe' or 'breakfast' which we didn't identify as a cuisine. This left us with a list of 49 cuisines and didn't consider any cuisine that had less than 10 restaurants. The SQL data was parsed into a pandas dataframe which has two columns for latitude and longitude, and the remaining are all the cuisines in Pittsburgh. If a restaurant is of that cuisine then the value for the column is 1 (else 0). Through subtracting the mean of the whole column from each value, dividing that by the standard deviation in order to get the z-score, feature scaling was performed on longitude and latitude in order to scale down the location to a range of cuisines. We selected 5 to be the appropriate number of clusters for KMeans++ by creating a plot to show the error vs. the number of clusters since it appears to be the greater 'bend' in the elbow. 
 
 \begin{center}
@@ -97,17 +97,38 @@ To find what cuisines may lie in particular neighborhoods in Pittsburgh, we perf
 \end{center}
 
 With the GMM implementation, we use co-variance as 'spherical' so that each component has its own single variance. As since in the figures below, the longitude/latitude of the restaurants have been plotted and each cluster is labeled with a cuisine. In order to avoid dominance of a particular cuisine purely because the number of restaurants it has in Pittsburgh, we calculated the ratio of each cuisine in the cluster with the total number of restaurants in that category, and then selected the category that has the maximum ratio to be the cluster label.
-
 \begin{center}
-\includegraphics[width=70mm,scale=0.5]{kmeans}
-\includegraphics[width=70mm,scale=0.5]{gmm}
+	\includegraphics[width=70mm,scale=0.5]{kmeans}
+	\includegraphics[width=70mm,scale=0.5]{gmm}
 \end{center}
+\subsection*{3.2 Review-based Recommendation System}
+Currently, review analysis is very useful under many recommendation systems scenarios. Specifically, for our project, we are trying to build up a demo of recommendation system based on the reviews for each restaurant. Generally, we are going to build up restaurants profile as well as the user profile based upon text reviews information. For the sake of implementing algorithms, we are going to use tf-idf method to transfer the words vectors to numeric vectors. By matching users’ review profile with the most similar cluster of restaurants, we can build up a simplified review based recommendation system.
+
+\subsubsection*{3.2.1 TF-IDF}
+\textbf{TF-IDF} stands for term frequency–inverse document frequency, which is numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus. For our project, we are using TF-IDF as method to turn text data to numeric vector. Basically, TF-IDF is extension of the concept of frequent itemset. \textbf{TF} stands for term frequency, which means the number of times a term occurs in a document. The more frequent one words appear in one document, the more important of this term is for a certain document. \textbf{IDF} stands for the inverse document frequency, which diminishes the weight of terms that occur very frequently in the document set and increases the weight of terms that occur rarely. TF-IDF weight is the product of TF term and the IDF term. Terms with higher TF-IDF scores are better to represent the information of each documents and vice versa.
+
+\subsubsection*{3.2.2 Text Review to Numeric Matrix and Clustering}
+Specifically, we extracted all restaurants in Pittsburgh along with reviews from the yelp SQL dataset. We merged all reviews for each restaurant into a single document. By using package NLTK, we preprocessed raw text review data by tokenization, stemming and lemmatization. And then, we build up a dictionary containing all preprocessed words. We wrote our own TF-IDF algorithm and turn text review profile to numeric TFIDF weight profile for each restaurant. After that we implemented K-means clustering algorithm using K-means ++ method offered by sklearn package. The relationship between cluster number and SSE is shown as following graph. However, it seems the SSE is not very good criteria to pick up the K because there is not obvious elbow point on the graph. We will try some other methods to pick up an appreciate number of clusters. 
+\begin{center}
+	\includegraphics[width=70mm,scale=0.5]{KvsError}
+\end{center}
+
+\subsubsection*{3.2.3 Evaluation for Recommendation System Performance}
+For the next step, we are going to pick up several sample users to build up the users’ review profile. Try to come up with methods finding out most similar cluster to the user profiles. For the evaluation part, we plan to use our own criteria, which is to check the average rating score of restaurants a user has been to in the clusters. The reviewed analysis improves the performance of recommendation system if the score is above the average score of all restaurants in the cluster and all restaurants the user has been. 
+ 
+
+	 
+	
+
+
+
 
 
 \section*{4 Discussion}
 
+\paragraph*{}
 Looking at the overall results of our data analysis and implementation, the group was pleasantly surprised by the outcomes.
-
+\paragraph*{}
 With our original intention to cluster cuisines by neighborhoods, K-Means had more well-defined clusters since each point only belongs to one cluster. On the other hand, GMM has over-lapping clusters since it calculates the probability of a point belonging to each cluster and therefore seemed to give better clustering.
 
 
