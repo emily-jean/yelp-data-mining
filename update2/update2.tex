@@ -63,24 +63,15 @@ To get started on a deeper exploratory analysis of reviews and ratings, we plott
 }
 \end{figure}
 
-Besides looking at the basic distribution, we plotted the relationship between the average number of reviews and rating level using box plot. Our original belief was that we thought better restaurants should receive more reviews. However, the results show us that restaurants with a medium rating acquire more reviews. 
+Besides looking at the basic distribution, we plotted the relationship between the average number of reviews and rating levels in Pittsburgh using box plot. Our original belief was that we thought better restaurants should receive more reviews. However, the results showed us that restaurants with a medium rating acquire more reviews. Continuing on the exploration of the relationship between average number of reviews, the average length of review (after tokenization and stemming) and each cuisine, in Pittsburgh in appears that Japanese foods receive the most reviews while Chinese foods receive the least number of reviews. When looking at the length of review, there doesn't appear to be many differences among the variety of cuisines. 
 
 \begin{figure}[h]
 \centering
 {
-\includegraphics[width=0.4\linewidth]{number_of_restaurants_vs_rating_level}
-}
-\end{figure}
-
-Exploring the relationship between average number of reviews, the average length of review (after tokenization and stemming) and each cuisine. In Pittsburgh in appears that Japanese foods receive the most reviews while Chinese foods receive the least number of reviews. When looking at the length of review, there doesn't appear to be many differences among the variety of cuisines. 
-
-\begin{figure}[h]
-\centering
-{
-\includegraphics[width=0.4\linewidth]{number_of_review_vs_cuisine}
+\includegraphics[width=0.35\linewidth]{number_of_review_vs_cuisine}
 }
 {
-\includegraphics[width=0.45\linewidth]{average_review_length}
+\includegraphics[width=0.4\linewidth]{average_review_length}
 }
 \end{figure}
 
@@ -109,14 +100,17 @@ The results are very promising. Few keywords such as "great","good","nice","serv
 
 Although some of our exploratory analysis focused on one city, we expanded our reviews analysis to 4 different cities with the most reviews (Edinburgh, Toronto, Las Vegas, and Pittsburgh), from 3 different countries. The thought here was that there may be differences between different cities such as the service, or people may have different diction. It's possible that the final cluster may be verified by different external evaluation criteria, so we thought it'd be useful to further explore this area. We plotted the differences of rating habits among the 4 cities based on average rating score for each type of cuisine. Edinburgh has the best rating feedback, relatively speaking, while Toronto seems to be lacking Yelper feedback.
 
-\begin{center}[h]
-	\includegraphics[width=60mm,scale=0.5]{Rating_different_restaurants_countries.png}
-\end{center}
+\begin{figure}[h]
+\centering
+{
+\includegraphics[width=0.4\linewidth]{Rating_different_restaurants_countries}
+}
+\end{figure}
 
 \section*{3 Data Mining Analysis}
 
 \subsection*{3.1 Geographic Based Clustering}
-To find what cuisines may lie in particular neighborhoods in Pittsburgh, we performed two clustering techniques: K-Means++ and GMM. In order to do this, we decided to look at the closeness and similarities of the restaurants by using the longitude and latitude which considered cluster closeness, as well as the category/cuisines to cluster for similarity. During the data exploration, we intentionally dug into all the types of categories, realizing that we would want to filter out other non-restaurant businesses as well as things such as 'cafe' or 'breakfast' which we didn't identify as a cuisine. This left us with a list of 49 cuisines and didn't consider any cuisine that had less than 10 restaurants. The SQL data was parsed into a pandas dataframe which has two columns for latitude and longitude, and the remaining are all the cuisines in Pittsburgh. If a restaurant is of that cuisine then the value for the column is 1 (else 0). Through subtracting the mean of the whole column from each value, dividing that by the standard deviation in order to get the z-score, feature scaling was performed on longitude and latitude in order to scale down the location to a range of cuisines. We selected 5 to be the appropriate number of clusters for KMeans++ by creating a plot to show the error vs. the number of clusters since it appears to be the greater 'bend' in the elbow. 
+To find what cuisines may lie in particular neighborhoods in Pittsburgh, we performed two clustering techniques: K-Means and GMM. In order to do this, we decided to look at the closeness and similarities of the restaurants by using the longitude and latitude which considered cluster closeness, as well as the category/cuisines to cluster for similarity. During the data exploration, we intentionally dug into all the types of categories, realizing that we would want to filter out other non-restaurant businesses as well as things such as 'cafe' or 'breakfast' which we didn't identify as a cuisine. This left us with a list of 49 cuisines. We didn't consider any cuisine that had less than 10 restaurants. The SQL data was parsed into a pandas dataframe which has two columns for latitude and longitude, and the remaining are all the cuisines in Pittsburgh. Using the one-hot method, if a restaurant is of that cuisine then the value for the column is 1. To account for the curvature of the earth, though you might want to adjust degrees of longitude and latitude, feature scaling was performed on longitude and latitude in order to scale down the location to a range of cuisines. This was done by subtracting the mean of the whole column from each value, dividing that by the standard deviation in order to get the z-score. We selected 5 to be the appropriate number of clusters for KMeans++ by creating a plot to show the error vs. the number of clusters since it appears to be the greater 'bend' in the elbow.
 
 \begin{center}[h]
 \includegraphics[width=70mm,scale=0.5]{kmeanserror}
