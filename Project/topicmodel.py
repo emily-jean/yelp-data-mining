@@ -1,8 +1,9 @@
 """
-    Run the file using 'python topicmodels.py sentiment num_of_topics num_of_words'
-    - sentiment is positive/negative
-    - num_of_topics is integer
-    - num_of_words is integer
+    Run the file using 'python topicmodels.py sentiment'
+    - sentiment is positive/negative/all
+    all - all reviews
+    positive - positive reviews
+    negative - negative reviews
 """
 
 import pymysql
@@ -16,6 +17,8 @@ import sys
 from datetime import datetime
 import pyLDAvis.gensim
 import warnings
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
 
 
 def process_review(review):
@@ -33,36 +36,45 @@ def print_time():
     print("\n")
 
 
-def train_models(topics, words):
-
+def generate_wordclouds(lda, topic_count,word_count):
     print("Latent Dirichlet Allocation......")
-    lda = models.LdaModel(doc_term_matrix, id2word=dictionary, alpha='auto', num_topics=topics, passes=20, iterations=50)
+
     print_time()
-
-    print_topics(lda,topics,words)
+    print(lda.print_topics(-1, word_count))
     print_time()
+    for i in range(topic_count):
+        wordcloud.fit_words(dict(lda.show_topics(i+1,200,formatted=False)[0][1])).to_file('lda_'+str(sentiment)+'_'+str(i+1)+'.png')
 
 
-def print_topics(lda,topics,words):
-    print(lda.print_topics(-1, words))
+def generate_ldavis(lda, topic_count, word_count):
+    print("Latent Dirichlet Allocation......")
 
+    print(lda.print_topics(-1, word_count))
+    print_time()
     lda_vis = pyLDAvis.gensim.prepare(lda, doc_term_matrix, dictionary)
-    # pyLDAvis.display(lda_vis)
-    pyLDAvis.save_html(lda_vis, 'visualization_'+sentiment+'_'+str(topics)+'.html')
+    pyLDAvis.save_html(lda_vis, 'visualization_' + sentiment + '_' + str(topic_count) + '.html')
 
 
 start_time = datetime.now()
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 print("Start time of program: " + str(start_time))
-sentiment = sys.argv[1]
-isPositiveReview = ">3" if sentiment == "positive" else "<3"
-number_of_topics = sys.argv[2]
-number_of_words = sys.argv[3]
+sentiment = str(sys.argv[1])
+review_rating_check = ""
+# number_of_topics = sys.argv[2]
+# number_of_words = sys.argv[3]
 tokenizer = RegexpTokenizer(r'\w+')
 stopWords = set(stopwords.words('english'))
+wordcloud = WordCloud()
 db_uri = "mysql+pymysql://root:root@localhost:3306/yelp_db"
 Lda = gensim.models.ldamodel.LdaModel
 connection = pymysql.connect(host='localhost', user='root', password='root', db='yelp_db', charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
+
+if sentiment == 'all' :
+    review_rating_check = ">0"
+elif sentiment == 'positive' :
+    review_rating_check = ">3"
+else:
+    review_rating_check = "<3"
 
 sql = """select top_biz.stars,top_biz.id,review.text FROM \
   (select * \
@@ -70,7 +82,7 @@ sql = """select top_biz.stars,top_biz.id,review.text FROM \
    where business.review_count > 200 and business.city = 'Pittsburgh'\
    ORDER BY review_count DESC \
    ) top_biz \
-INNER join review on top_biz.id = review.business_id and review.stars """ + isPositiveReview + """ \
+INNER join review on top_biz.id = review.business_id and review.stars """ + review_rating_check + """ \
 INNER join category on category.business_id = top_biz.id and category.category = 'Restaurants' \
 ORDER BY top_biz.review_count DESC;"""
 
@@ -92,4 +104,7 @@ processed_corpus = [[token for token in text if frequency[token] > 10] for text 
 dictionary = corpora.Dictionary(processed_corpus)
 doc_term_matrix = [dictionary.doc2bow(doc) for doc in processed_corpus]
 
-train_models(100, 3)
+lda = models.LdaModel(doc_term_matrix, id2word=dictionary, num_topics=50, passes=20, iterations=50)
+
+#generate_wordclouds(lda, 50, 3)
+generate_ldavis(lda, 50, 3)
