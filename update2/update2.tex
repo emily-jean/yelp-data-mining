@@ -108,7 +108,7 @@ Although most of our exploratory analysis focused on one city, we expanded our r
 \section*{3 Data Mining Analysis}
 
 \subsection*{3.1 Geographic Based Clustering}
-To find what cuisines may lie in particular neighborhoods in Pittsburgh, we performed two clustering techniques: K-Means and GMM. When looking at a map of all the restaurants in Pittsburgh, we can see that it is extremely dense.
+To find what cuisines may lie in particular neighborhoods in Pittsburgh, we performed two clustering techniques: K-Means and GMM. Ideally we would like to add DBSCAN before the end of the report to compare the results.
 
 \begin{figure}[h]
 \centering
@@ -117,7 +117,11 @@ To find what cuisines may lie in particular neighborhoods in Pittsburgh, we perf
 }
 \end{figure}
 
-In order to do this, we decided to look at the closeness and similarities of the restaurants by using the longitude and latitude which considered cluster closeness, as well as the category/cuisines to cluster for similarity. During the data exploration, we intentionally dug into all the types of categories, realizing that we would want to filter out other non-restaurant businesses as well as things such as 'cafe' or 'breakfast' which we didn't identify as a cuisine. This left us with a list of 49 cuisines. We didn't consider any cuisine that had less than 10 restaurants. The SQL data was parsed into a pandas dataframe which has two columns for latitude and longitude, and the remaining are all the cuisines in Pittsburgh. Using the one-hot method, if a restaurant is of that cuisine then the value for the column is 1. To account for the curvature of the earth, though you might want to adjust degrees of longitude and latitude, feature scaling was performed on longitude and latitude in order to scale down the location to a range of cuisines. This was done by subtracting the mean of the whole column from each value, dividing that by the standard deviation in order to get the z-score. We selected 5 to be the appropriate number of clusters for KMeans++ by creating a plot to show the error vs. the number of clusters since it appears to be the greater 'bend' in the elbow.
+In order to run these algorithms, we decided to look at the closeness and similarities of the restaurants by using the longitude and latitude which considered cluster closeness, as well as the category/cuisines to cluster for similarity. During the data exploration, we intentionally dug into all the types of categories, realizing that we would want to filter out other non-restaurant businesses as well as things such as 'cafe' or 'breakfast' which we didn't identify as a cuisine. This left us with a list of 49 cuisines. We didn't consider any cuisine that had less than 10 restaurants.
+\\\\
+The SQL data was parsed into a pandas dataframe which has two columns for latitude and longitude, and the remaining are all the cuisines in Pittsburgh. Using the one-hot method, if a restaurant is of that cuisine then the value for the column is 1. To account for the curvature of the earth, though you might want to adjust degrees of longitude and latitude, feature scaling was performed on longitude and latitude in order to scale down the location to a range of cuisines. This was done by subtracting the mean of the whole column from each value, dividing that by the standard deviation in order to get the z-score. With the GMM implementation, we use co-variance as 'spherical' so that each component has its own single variance. 
+\\\\
+For K-Means, the greatest struggle at first was trying to decide on what K should be. We selected 5 to be the appropriate number of clusters for KMeans++ by creating a plot to show the error vs. the number of clusters since it appears to be the greater 'bend' in the elbow.
 
 \begin{figure}[h]
 \centering
@@ -126,7 +130,7 @@ In order to do this, we decided to look at the closeness and similarities of the
 }
 \end{figure}
 
-With the GMM implementation, we use co-variance as 'spherical' so that each component has its own single variance. As since in the figures below, the longitude/latitude of the restaurants have been plotted and each cluster is labeled with a cuisine. In order to avoid dominance of a particular cuisine purely because the number of restaurants it has in Pittsburgh, we calculated the ratio of each cuisine in the cluster with the total number of restaurants in that category, and then selected the category that has the maximum ratio to be the cluster label.
+As shown in the figures below, the longitude/latitude of the restaurants have been plotted and each cluster is labeled with a cuisine. In order to avoid dominance of a particular cuisine purely because the number of restaurants it has in Pittsburgh, we calculated the ratio of each cuisine in the cluster with the total number of restaurants in that category, and then selected the category that has the maximum ratio to be the cluster label.
 
 \begin{figure}[h]
 \centering
@@ -138,7 +142,7 @@ With the GMM implementation, we use co-variance as 'spherical' so that each comp
 }
 \end{figure}
 
-With our original intention to cluster cuisines by neighborhoods, K-Means had more well-defined clusters since each point only belongs to one cluster. On the other hand, GMM has over-lapping clusters since it calculates the probability of a point belonging to each cluster and therefore seemed to give better clustering.
+With our original intention to cluster cuisines by neighborhoods, K-Means has a more well-defined clusters since each point only belongs to one cluster. On the other hand, GMM has over-lapping clusters since it calculates the probability of a point belonging to each cluster and therefore seemed to give better clustering. The two results have very similar clusterings, however, we only received a silhouette score of 0.22. What we believe this tells that is that based there doesn't seem to be many neighborhoods or districts within Pittsburgh that seem to be overly known for a specific cuisine. Pittsburgh doesn't seem to have as many neighborhoods in Boston that is more divided by cuisine or culture, so these results may make some sense. To continue this exploration, we will run K-Means with latitude and longitude only to see if we can discover clusters that can be compared to the actual cuisine labeling within the neighborhoods through the use of purity for evaluation.
 
 \subsection*{3.2 Review-based Recommendation System}
 Currently, review analysis is very useful under many recommendation systems scenarios. Specifically, for our project, we are trying to build up a demo of recommendation system based on the reviews for each restaurant. Generally, we are going to build up restaurants profile as well as the user profile based upon text reviews information. For the sake of implementing algorithms, we are going to use tf-idf method to transfer the words vectors to numeric vectors. By matching users’ review profile with the most similar cluster of restaurants, we can build up a simplified review based recommendation system.
@@ -287,7 +291,16 @@ Note that number of topics = 50 is still an approximation but a better approxima
 
 \section*{4 Discussion}
 
-Looking at the overall results of our data analysis and implementation, the group was pleasantly surprised by the outcomes so far. For our final report, we plan on performing a deeper clustering analysis with respect to neighborhood cuisines and running our models on other cities such as Las Vegas to see if we receive any interesting results. 
+Looking at the overall results of our data analysis and implementation, the group was pleasantly surprised by the outcomes so far. For our final report, we plan on performing a deeper clustering analysis with respect to neighborhood cuisines and running our models on other cities such as Las Vegas to see if we receive any interesting results.
+
+Looking at the overall results of our data analysis and implementation, the group was pleasantly surprised by the
+outcomes so far. However there are still some areas that need to be further investigated and improved. First, from our current result,
+it seems that there is no strong relationship between type of cuisines and geographical neighborhood in Pittsburgh. We would like to run K-Means and possibly implement DBSCAN, run it with the latitude and longitude only. We would ideally like to auto-discover neighborhoods if possible. We want to run our implementation on varies cities, such as Las Vegas, to see if there are any differences on
+cuisine and neighborhood connectivities among different cities. And we are going to try more evaluation methods
+such as purity to evaluate this kind of relationship. With respect to the recommendation system, we are going
+to build up users profile and find out methods matching users profiles and restaurants clusters. As mentioned previously, an evaluation method will be implemented to see the performance of review based
+recommendation system. For the third part of topic model, we are going to pick up several sample restaurants as
+demo and try to give our consulting advice based on our topic and sentimental analysis.
 
 
 \section*{5 References}
