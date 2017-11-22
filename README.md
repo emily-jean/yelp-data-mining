@@ -1,7 +1,18 @@
-# yelp-data-mining
+# Yelp Data Mining
+
+This project was done as a part of CS6220 Data Mining Techniques. The project has three components:
+
+## 1. Clustering Neighborhoods by Cuisines
+We are looking to see if neighbors are known for their cuisine - Italian, Chinese, Irish, French, etc. Diving deeper, we look to explore whether particular areas or streets in a city are more trendy, authentic, divy or upscale.
+
+## 2. Topic Modeling
+Provide recommendations on topics a restaurant business owner can improve or provide recommendation on topics for a new Restaurant. 
+
+## 3. Restaurant Recommendation
+Recommend new restaurants to a user based upon reviews.
 
 
-1. Setting up your environment:
+## Environment setup
     - Download the sql data from https://www.yelp.com/dataset/ and put it under the folder dataset in your local repository (the associate and structures can be found here: https://www.yelp.com/dataset/documentation/sql)
     - Install PyCharm (free for students)
     - Install MySQL server (once installed, go to system settings [on mac] and make sure it's running)
@@ -26,7 +37,7 @@
                 # semodule -i my-mysqld.pp
     - SELECT User, Host FROM mysql.user; (run in mysql)
     
-2. Running jupyter notebook:
+## Running jupyter notebook:
     - Install pymysql from your terminal (sudo pip install PyMySQL. If anaconda installed, launch it, go to env, click the arrow next to root, open terminal and run the commands here)
     - Install sqlalchemy from command line (sudo pip install sqlalchemy)
     - Install pandas
