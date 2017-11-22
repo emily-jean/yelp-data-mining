@@ -103,6 +103,8 @@ ENV/
 .idea/
 
 #latex
-.aux
-.loh
-.gz
+*.aux
+*.loh
+*synctex.gz
+template/
+*.log
