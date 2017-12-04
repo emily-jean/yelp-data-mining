@@ -100,5 +100,5 @@ ENV/
 # mypy
 .mypy_cache/
 .idea
-Project/yelp_db.sql
-Project/.ipynb_checkpoints
+Topic Modeling/yelp_db.sql
+Topic Modeling/.ipynb_checkpoints
