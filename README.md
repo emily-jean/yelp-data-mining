@@ -24,7 +24,7 @@ Recommend new restaurants to a user based upon reviews.
     - Click Test Connection, Click OK
     - Import the yelp-data-mining project into PyCharm by navigating to dataset, Right click on the yelp_db.sql file and click Run. This will take about an hour to run on your machine
 
-*extra steps for RHEL7:
+## Environment setup: Extra steps for RHEL7:
     - start/stop/restart: service mysql start
     - /var/lib/mysql/mysql.sock (where socket file is)
     - nano /etc/my.cnf (may need to modify. add [mysqld] port=3306, protocol=tcp, host=127.0.0.1, skip-name-resolve  [mysql] max_allowed_packet=64M
@@ -43,5 +43,5 @@ Recommend new restaurants to a user based upon reviews.
     - Install pandas
     - Install nltk (run python, import nltk nltk.download())
     - Install folium (conda install -c ioos folium)
-    - Install mysqlconnection
+    - Install mysqlconnector
 
