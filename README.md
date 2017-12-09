@@ -44,4 +44,8 @@ Recommend new restaurants to a user based upon reviews.
     - Install nltk (run python, import nltk nltk.download())
     - Install folium (conda install -c ioos folium)
     - Install mysqlconnector
+    - Also install pickle, google-cloud, gensim, pyLDAvis, warnings, datetime, textblob, wordcloud
+
+## Google Cloud API
+Under project/topic-modeling, there is a json file with the private API key to hit Google Cloud
 
