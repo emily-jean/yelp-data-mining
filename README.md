@@ -36,10 +36,14 @@ Recommend new restaurants to a user based upon reviews.
 		# ausearch -c 'mysqld' --raw | audit2allow -M my-mysql
                 # semodule -i my-mysqld.pp
     - SELECT User, Host FROM mysql.user; (run in mysql)
+
+## Required packages/modules:
+    - cd to project root directory
+    - run: pip install -r requirements.txt
     
 ## Running jupyter notebook:
     - Install pymysql from your terminal (sudo pip install PyMySQL. If anaconda installed, launch it, go to env, click the arrow next to root, open terminal and run the commands here)
-    - Install sqlalchemy from command line (sudo pip install sqlalchemy)
+    - Install sqlalchemy
     - Install pandas
     - Install nltk (run python, import nltk nltk.download())
     - Install folium (conda install -c ioos folium)
