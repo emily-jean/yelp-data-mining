@@ -39,7 +39,7 @@ Recommend new restaurants to a user based upon reviews.
 
 ## Required packages/modules:
     - cd to project root directory
-    - run: pip install -r requirements.txt
+    - run: pip3 install -r requirements.txt
     
 ## Running jupyter notebook:
     - Install pymysql from your terminal (sudo pip install PyMySQL. If anaconda installed, launch it, go to env, click the arrow next to root, open terminal and run the commands here)
