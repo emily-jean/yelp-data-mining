@@ -164,16 +164,16 @@ To find out if there are areas in the city that have a particular attribute, we 
 
 
 \subsection*{3.2 Review-based Recommendation System}
-Review analysis is very useful under many recommendation system scenarios. For our project, we built a recommendation system based on the reviews left by users to restaurants in Pittsburgh. To build up our review based recommendation system, we used the "stars" along with each review as the rating score. We tried to build up the user-based as well as the item-based recommendation system by using k-nearest element method. It seems that user-based recommendation perform better than the item-based one. Besides, we add review helpfulness (number of other user who think the review is useful) as score trying to improve the performance of the recommendation system. The result shows the score of helpfulness did have improvement on the recommendation system performance.   
+Review analysis is very useful under many recommendation system scenarios. For our project, we built a recommendation system based on the reviews left by users to restaurants in Pittsburgh. To build up our review based recommendation system, we used the "stars" along with each review as the rating score. We tried to build up the user-based as well as the item-based recommendation system by using the k-nearest element method. It seems that user-based recommendation perform better than the item-based one. We added the review helpfulness score (the number of other users who think the review is useful) to improve the performance of the recommendation system. The result shows the score of helpfulness improved the performance.   
 
 \subsubsection*{3.2.1 User-based and Item-based}
-To build up the user or item based recommendation system, we tried to build the utility matrix by extracting . Utility matrix is a representation method to represent rating score along with user and item. Cosine distance is employed to evaluate the similarity between each pair of elements, which can be expressed as 
+To build up the user or item based recommendation system, we built the utility matrix by extracting the user ID, business ID, and rating stars. The utility matrix represents the rating score along with the user and item. The cosine distance is used to evaluate the similarity between each pair of elements, which can be expressed as 
   $$sim(\vec{v1}, \vec{v2}) = \frac{(\vec{v1}\cdot\vec{v2}) }{( |\vec{v1}|\times|\vec{v2}|)}$$
-  where $\vec{v1}$ and $\vec{v2}$ stands for rating vector of each element. For improving the computational efficiency, we used matrix operation and get the cosine similarity matrix by using 
+  where $\vec{v1}$ and $\vec{v2}$ stands for the rating vector of each element. For improving the computational efficiency, we used the matrix operation and get the cosine similarity matrix by using 
  $$Sim\_U=\frac{U*U^T}{\sqrt{dia(U\times U^T)}}$$
- where$ \sqrt{dia(U\times U^T)}$ stands for the vector containing the square root for all diagonal elements of u*ut. We pick up top k nearest elements according to the similarity matrix. For the prediction of unavailable rating score, we take weighted average rating of the k nearest neighborhood as an estimation. For the evaluation, we used the mse to evaluate the differences between the predicted rating and the real rating:
+ where$ \sqrt{dia(U\times U^T)}$ stands for the vector containing the square root for all diagonal elements of u*ut. We pick the top k nearest elements according to the similarity matrix. For the prediction of unavailable rating scores, we take the weighted average rating of the k nearest neighborhood as an estimation. For the evaluation, we used the MSE to evaluate the differences between the predicted rating and the real rating:
  $$ mse=\sqrt{\frac{1}{|U|\cdot|I|}\sum_{u\epsilon U, i\epsilon I}^{} (\hat{r_{ui}}-r_{ui})^2}$$
- where $U$ is the set of users; $I$ is the set of items; $\hat{r_{ui}}$ is the predicted rating by taking weighted average of k nearest neighborhood; $r_{ui}$ is the real rating extracted from dataset. The relationship between number of k and mse for user-based and item-based recommendation system are shown as Figure 2. From the graph, we can find out that the performance of user-based item performances better than the item-based recommendation because the mse of user-based recommendation is much smaller with k being the same.
+ where $U$ is the set of users; $I$ is the set of items; $\hat{r_{ui}}$ is the predicted rating by taking the weighted average of k nearest neighborhood; and $r_{ui}$ is the real rating extracted from dataset. The relationship between the number of k and MSE for user-based and item-based recommendation systems are shown in Figure 2. From the graph, we can see that the performance of the user-based system is better than the item-based system because the MSE of the user-based recommendation system is much smaller when k is the same.
 \begin{figure}[h]
 \centering
 \subfigure[User-based]
@@ -189,9 +189,11 @@ To build up the user or item based recommendation system, we tried to build the 
 
 
 \subsubsection*{3.2.2 Helpfulness Score}
-Besides the basic element-based recommendation system. We also tried to use the "helpfulness" score to improve the performance of the recommendation system. Helpfulness here stands for how useful a certain review is for other users. Usually, besides for text, stars, we also ask user to give the information if the review is useful for them and collect the number of users who think a certain review is useful.The more the users who think a certain review is useful, the more informative the review is. Based on this intuition, we add the helpfulness score into our user-based recommendation system (because of the better performance compared to the item-based).First we extract the number of "useful" from the dataset along with each review and build up the score matrix along with the information of user id and business id.From the data exploration, we found most of the reviews have zero usefulness. If we direct use the count of usefulness as the weight, we will lose most of the rating information, which does not make sense. As a result, we turned the count of usefulness to helpfulness score by using the logistic function which is:
+Besides the basic element-based recommendation system, we decided to use the "helpfulness" score to improve the performance of the recommendation system. Helpfulness stands for how useful a certain review is for other users. Besides text feedback and a rating in stars, Yelp also ask users to give information on if the review is useful. By collecting this information, if more users believe a certain review is useful, then the more informative the review is. Based on this intuition, we added the helpfulness score into our user-based recommendation system (due to the increased performance in comparison to the item-based system). 
+\\
+First we extract the number of "useful" reviews from the dataset along with each review and built up the score matrix, including the user ID and business ID. From the original data exploration, we found most of the reviews have zero usefulness. If we directly use the count of usefulness as the weight, we would lose most of the rating information. As a result, we turned the count of usefulness into the helpfulness score by using the following logistic function:
 $$Helpfulness=\log_2(Useful\_count+2)$$
-The differences between recommendation system with helpfulness score and original one is  that after we get k nearest users, we not only take cosine similarity, but also the helpfulness score as the weight. The relationship between number of k and the mse based on the user-based recommendation system with helpfulness score is shown as following. Compared to the original user based recommend system, the one with helpfulness score seemed perform better. When the k is around 200, the mse is generally lower than 2, which is in the range of 2 to 3 for the original user based recommendation system. 
+The differences between the recommendation system using the helpfulness score and the original one is that after we get k nearest users, we not only take cosine similarity, but also the helpfulness score as the weight. The relationship between the number of k and the MSE based on the user-based recommendation system with the helpfulness score is shown below. When k is ~200, the MSE is generally lower than 2, which is in the range of 2 to 3 for the original user based recommendation system. 
 \begin{figure}[h]
 	\centering
 	\subfigure
@@ -201,7 +203,7 @@ The differences between recommendation system with helpfulness score and origina
 	\caption{Relationship between MSE and K for scored recommendation system}
 \end{figure}
 
-Based on the performance of user-based, item-based and the user-based with helpfulness score recommendation system. We choose the final one to build up our demo recommendation system. Given a user id, the system will return 5 most possibly favorable restaurants for the specific user. For example, we took the 199th user as a sample. And the top 5 recommended restaurants are \emph{Burgatory}, \emph{Maiku Sushi}, \emph{Chaya Japanese Cuisine Point}, \emph{The green mango} and \emph{Meat \& Potatoes}. 
+Based on the performance of the user-based, item-based and the user-based with helpfulness score recommendation system, we used the final one to build up our demo recommendation system. Given a user ID, the system will return the five most favorable restaurants for the specific user. For example, for the 199th user, the top 5 recommended restaurants are \emph{Burgatory}, \emph{Maiku Sushi}, \emph{Chaya Japanese Cuisine Point}, \emph{The green mango} and \emph{Meat \& Potatoes}. 
  
 \subsection*{3.3 Topic Modeling}
 
@@ -416,10 +418,6 @@ news\_classification.html
 \includegraphics[width=0.6\linewidth]{first_image}
 }
 \end{figure}
-
-Restaurant profiles and user profiles were built up based upon the text review information. To transfer the words vectors to numeric vectors, TF-IDF method was used. By matching users’ review profile with the most similar cluster of restaurants, a simplified review based recommendation system was developed.\\
-
-All the restaurants and reviews of restaurants in Pittsburgh were extracted from the yelp SQL dataset, and the reviews for each restaurant were merged into a single document. By using the NLTK package, we preprocessed the raw text review data through tokenization, stemming and lemmatization. Next, a dictionary was built up containing all the preprocessed words. The team implemented our own TF-IDF algorithm and turned the text review profile into a numeric TF-IDF weight profile for each restaurant. K-means clustering algorithm was then run using the K-means ++ method offered by the sklearn package. The relationship between the cluster number and SSE is shown in the graph below. In this case, SSE does not look to be a very good criteria to determine K since there is not an obvious "elbow" in the graph. Ideally, other methods would be used to pick an appropriate number of clusters. 
 
 
 \end{document}
