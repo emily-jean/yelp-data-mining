@@ -5,7 +5,7 @@ nltk==3.2.5
 folium==0.2.1
 numpy==1.13.3
 matplotlib==2.0.2
-mysql-connector-python==2.0.4
+mysql-connector==2.1.4
 cloudpickle==0.2.2
 google-cloud==0.31.0
 gensim==3.1.0
