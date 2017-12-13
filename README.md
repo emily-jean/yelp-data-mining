@@ -1,6 +1,8 @@
 # Yelp Data Mining
 
-This project was done as a part of CS6220 Data Mining Techniques (YouTube Video: https://www.youtube.com/watch?v=xu1qzG7FF7c). The project has three components:
+Dataset: https://www.yelp.com/dataset/challenge
+
+This project was done as a part of CS6220 Data Mining Techniques (YouTube Video: https://www.youtube.com/watch?v=xu1qzG7FF7c). The final report can be found under /reports/final/report.pdf. The source code can be found under /project. This project has three components:
 
 ## 1. Clustering Neighborhoods by Cuisines
 We are looking to see if neighbors are known for their cuisine - Italian, Chinese, Irish, French, etc. Diving deeper, we look to explore whether particular areas or streets in a city are more trendy, authentic, divy or upscale.
