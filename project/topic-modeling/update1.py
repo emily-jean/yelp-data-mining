@@ -28,7 +28,7 @@ def findFrequentWords(fwdf,sentiment,plotname):
     words = Counter(" ".join(r).split(" ")).most_common(50)
     df = pd.DataFrame(words, columns=['Word', 'Count'])
     df.plot.bar(x='Word', y='Count')
-    plt.savefig(plotname)
+    plt.savefig(plotname+".pdf",bbox_inches="tight")
 
 
 def plotRatings(pdf,plotname):
