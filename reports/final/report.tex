@@ -174,6 +174,7 @@ To build up the user or item based recommendation system, we built the utility m
  where$ \sqrt{dia(U\times U^T)}$ stands for the vector containing the square root for all diagonal elements of u*ut. We pick the top k nearest elements according to the similarity matrix. For the prediction of unavailable rating scores, we take the weighted average rating of the k nearest neighborhood as an estimation. For the evaluation, we used the MSE to evaluate the differences between the predicted rating and the real rating:
  $$ mse=\sqrt{\frac{1}{|U|\cdot|I|}\sum_{u\epsilon U, i\epsilon I}^{} (\hat{r_{ui}}-r_{ui})^2}$$
  where $U$ is the set of users; $I$ is the set of items; $\hat{r_{ui}}$ is the predicted rating by taking the weighted average of k nearest neighborhood; and $r_{ui}$ is the real rating extracted from dataset. The relationship between the number of k and MSE for user-based and item-based recommendation systems are shown in Figure 2. From the graph, we can see that the performance of the user-based system is better than the item-based system because the MSE of the user-based recommendation system is much smaller when k is the same.
+
 \begin{figure}[h]
 \centering
 \subfigure[User-based]
@@ -210,7 +211,20 @@ Based on the performance of the user-based, item-based and the user-based with h
 Topic modeling is a text-mining tool for discovery of hidden semantic structures in a text body. This is an unsupervised learning technique that assumes documents are produced from a mixture of topics. The "topics" produced by topic modeling techniques are clusters of similar words. Using contextual clues, topic models can connect words with similar meanings and distinguish between uses of words with multiple meanings. 
 The most common topic models are Latent Semantic Indexing (LSI), Latent Dirichlet Allocation (LDA), Hierarchical Dirichlet Process (HDP). The main idea of all these models is to find the "abstract" topics that occur in a collection of documents. We chose to use LDA since it is the most preferred due to it results by using a generative probabilistic model.
 
-\subsubsection*{3.3.1 Latent Dirichlet Allocation}
+\subsubsection*{3.3.1 Sentimental Analysis}
+At first when we performed topic modeling on positive reviews and negative reviews, we were using review ratings to distinguish positive and negative reviews. After, we implemented sentiment analysis to classify positive and negative reviews. We used Google Cloud Natural Language API, a powerful text analysis tool, to inspect the emotional opinion of customers in reviews. The API attempts to determine the overall polarity of the text and is represented by numerical score and magnitude values. The score ranges between -1 and 1, and the magnitude corresponds to overall emotional leaning of the text. Scores greater than 0.25 is positive, and scores less than -0.25 is negative; anything in between is  a neutral review. Magnitude determines the overall strength of emotion in the text. Unlike the score, magnitude is not normalized.\\
+
+In this project, we are more interested in highly positive reviews and highly negative reviews so that we can have a clear understanding of latent topics. We only considered the reviews whose magnitude is greater than 3 for our analysis. Below is a plot of sentiment distribution of reviews for different restaurants in Pittsburgh.
+
+\begin{figure}[h]
+\centering
+{
+\includegraphics[width=0.5\linewidth]{review_analysis}
+}
+\end{figure}
+
+
+\subsubsection*{3.3.2 Latent Dirichlet Allocation}
 Latent Dirichlet allocation (LDA) is a particularly popular method for fitting a topic model. It models each document as a dirichlet mixture of topics, and each topic as a mixture of words. This allows documents to overlap with each other in terms of content, rather than being separated into discrete groups.\\
 
 We filtered the dataset down to restaurants in Pittsburgh that have atleast 200 reviews (there are 109 restaurants and 38,785 reviews that match our criteria). This allowed us to extract the latent subtopics and pinpoint areas of interest. We distinguish these reviews as positive reviews and negative reviews based on their rating. To reduce noise, data cleaning of these reviews was performed. Only terms that occur atleast 10 times in the corpus were included into the training model because the less frequent terms wouldn't be contributing much to the topic and they increase the size of the document vector. This leads to more training time as well. We used gensim, a tool for discovering the semantic structure of documents by examining the patterns of words. The cleaned reviews were fed to LDA model, and below are word clouds of 8 topics consisting of different words. Note that the same word can be present in multiple topics. Also note that we can get any number of topics we want. We set it to 8 in order to get a brief overview of what the data looks like. The font size in the word cloud indicates the frequency of the word in the topic. The higher the frequency of the word in topic, the higher would be the font.
@@ -280,13 +294,11 @@ We filtered the dataset down to restaurants in Pittsburgh that have atleast 200 
 \caption{LDA Negative Results using WordClouds}
 \end{figure}
 
-Orginally, we observed that words like “place”, “good”, ”food”, and ”chicken” were found in almost all the word clouds because we had selected a poor number of topics. This was improved by training the model with a greater number of latent features (number of topics). With a very high number of topics, we needed a better tool for exploratory analysis.\\
-
-ADD VYSHAAL'S UPDATE HERE.\\
+Originally, we observed that words like “place”, “good”, ”food”, and ”chicken” were found in almost all the word clouds because we had selected a poor number of topics. This was improved by training the model with a greater number of latent features (number of topics). With a very high number of topics, we needed a better tool for exploratory analysis.\\
 
 The high font size of words like “place”, ”good”, and ”food” in all the word clouds is due to the very high frequency of these words in their respective topics. If we increase the number of topics, repetition of these words in multiple wordclouds would decrease but the font size in their respective word cloud would not decrease. 
 
-\subsubsection*{3.3.2 Visualization using PyLDAVis}
+\subsubsection*{3.3.3 Visualization using PyLDAVis}
 pyldavis, a Python LDA Visualization tool for LDA Models was used to create visuals for our LDA model. In A.2 of the Appendix, a visual for the LDA model on negative reviews with 50 topics can be found. For a more detailed exploratory analysis, download this\footnote{\url{https://github.com/emily-jean/yelp-data-mining/blob/master/project/topic-modeling/visualization_negative_50.html}} html page and run it in your browser.\\
 
 In LDA model on negative reviews we have 50 circles representing each topic. The area of a circle represents the prevalence of the topic. The length of the bars on the right represent the membership of a term in a particular topic. In addition to visualizing topic prevalence, the left pane shows inter-topic differences. The distance between topics is calculated using Jenson Shannon Distance, a method of measuring similarity between two probabilistic distributions. A topic in LDA is a multinomial distribution over the (typically thousands of) terms in the vocabulary of the corpus. It can also be inferred that topics consisting of the same/similar words are close to each other. Each topic’s overall prevalence is encoded using the areas of the circles, where topics are sorted in decreasing order of prevalence. Note the Area of topic 1 $>$ topic 2 $>$ ... Topic50. When topic 1 is clicked, the right panel of the visualization depicts a horizontal barchart whose bars represent the individual terms that are the most useful for interpreting the currently selected topic on the left. Words with high frequency are present in the top of the panel. A pair of overlaid bars in the right panel represent both the corpus-wide frequency of a given term as well as the topic-specific frequency.
@@ -309,34 +321,73 @@ Lets now see the most ranked words of topic 1 when $\lambda = 0, \lambda = 0.6$ 
 \begin{figure}[h]
 \centering
 {
-\includegraphics[width=0.3\linewidth]{lambda0}
+\includegraphics[width=0.25\linewidth]{lambda0}
 }
 {
-\includegraphics[width=0.3\linewidth]{lambda06}
+\includegraphics[width=0.25\linewidth]{lambda06}
 }
 {
-\includegraphics[width=0.3\linewidth]{lambda1}
+\includegraphics[width=0.25\linewidth]{lambda1}
 }
 \end{figure}
 
 From the plots above, it can be clearly observed that when $\lambda = 0$, words that occur only this topic have a high ranking. When $\lambda = 1$, words that occur with highest number of times are ranked high, so we choose an optimum $\lambda = 0.6$ for better topic interpretation.\\
 
-A similar kind of analysis can also be done with positive reviews. Download this\footnote{\url{https://github.com/emily-jean/yelp-data-mining/blob/master/project/topic-modeling/visualization_positive_50.html}} html page and run it in your browser for data exploration of the LDA model on positive reviews with 50 topics. Preivously, the number of topics chosen was an approximation. To get the optimal number of topics, Topic Coherence was used.\\
+A similar kind of analysis can also be done with positive reviews. Within our repository, the visualization\_positive\_50 html page can be run in your browser for data exploration of the LDA model on positive reviews with 50 topics. At first, the number of topics chosen was an approximation. To get the optimal number of topics, Topic Coherence was used.
 
-INSERT VYSHAAL'S UPDATE HERE	
+\subsubsection*{3.3.4 Topic Coherence}
+Topic Coherence is a measure used to evaluate topic models: methods that automatically generate topics from a collection of documents, using latent variable models. Each such generated topic consists of words, and the topic coherence is applied to the top N words from the topic. It is defined as the average of the pairwise word-similarity scores of the words in the topic. A good model will generate coherent topics, i.e., topics with high topic coherence scores. Good topics are topics that can be described by a short label, therefore this is what the topic coherence measure should capture. Here is a plot between Topic Coherence Score and the number of topics. As we can see from the plot below when number of topics equal to 12, the score is maximal.\\
+
+\begin{figure}[h]
+\centering
+{
+\includegraphics[width=0.3\linewidth]{negative_coherence-topics}
+}
+\end{figure}
+
+We picked 4 different wordclouds and displayed it here. Each of these wordclouds discuss about different topics like Service/Experience, Taste, Fooditems, Meals . Since topics are probability distributions of words, we can see words like food, chicken appearing in multiple topics. 
+
+\begin{figure}[h]
+\centering
+\subfigure[Fooditems]
+{
+\includegraphics[width=0.45\linewidth]{fooditems}
+}
+\subfigure[Foodtastes]
+{
+\includegraphics[width=0.45\linewidth]{foodtastes}
+}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\subfigure[Meals]
+{
+\includegraphics[width=0.45\linewidth]{meals}
+}
+\subfigure[Service]
+{
+\includegraphics[width=0.45\linewidth]{service}
+}
+\end{figure}
+
+
+Detailed exploratory analysis can be done using pyLDAvis\footnote{\url{https://github.com/emily-jean/yelp-data-mining/blob/master/project/topic-modeling/files/final_update_files/pyldavis_negative.html}}.
+
+A similar kind of exploratory analysis is done for positive reviews. We chose to set the number of topics to 18 for positive reviews after reviewing the coherence score. The main topics explored in positive reviews are Ambience, Service, Taste/Flavour, Desserts, Food Items, Locality. For a detailed exploratory analysis, click here\footnote{\url{https://github.com/emily-jean/yelp-data-mining/blob/master/project/topic-modeling/files/final_update_files/pyldavis_positive.html}}.
 
 
 \section*{4 Discussion}
 
-Looking at the overall results of our data analysis and implementation, the group was pleasantly surprised by the
-outcomes.\\
 Although it seems that there is no strong relationship between type of cuisines and geographical neighborhood in Pittsburgh, there seems to be a more accurate clustering of areas based upon their attributes, such as upscale, divey, or casual. Our goal of auto-discovering neighborhoods did not come about in our results. In the future, we would like to run our implementation on varies cities, such as Las Vegas, to see if there are any differences on
 cuisine and neighborhood connectivities among different cities.\\
 
 For the recommendation system, we found the item-based recommendation system performs worse than the user-based system. We saw improvement in the results by taking the number of usefulness into consideration, meaning that it is useful for users to make a reference to reviews that are very popular. Since we are only using the MSE based on the rating (in stars) as the evaluation, this probably does not show the true preference of users. Originally, we wanted to take text information of reviews into consideration and we implemented our own TF-IDF algorithm, but due to limited time, we did not implement this into our recommendation system. In the future, we would like to use the text information to improve the performance of recommendation system.\\
 
-ADD TOPIC MODELING DISCUSSION
+After performing topic modeling, we can see that the most frequent topics covered in negative reviews are Service, Taste, Items, and Meals. The topics mostly covered in positive reviews are Ambience, Service, Taste, Desserts, Items, Locality. In summary, it's been very interesting to see how significant service and food taste can affect a rating and review. Looking at the overall results of our data analysis and implementation, the group was pleasantly surprised by the
+outcomes.\\
 
+\newpage
 
 \begin{thebibliography}{9}
 
@@ -395,27 +446,37 @@ https://rstudio-pubs-static.s3.amazonaws.com/79360\_850b2a69980c4488b1db95987a24
 \textit{News classification with topic models in gensim
 }.
 https://markroxor.github.io/gensim/static/notebooks/gensim\_
-news\_classification.html
+news\_classification.html \\
 
 \end{thebibliography}
 
-
+\newpage
 
 \appendix
 \section{Appendices}
+
 \subsection{GMM - Clustering of Neighborhood Cuisines in Pittsburgh}
 \begin{figure}[h]
 \centering
 {
-\includegraphics[width=0.5\linewidth]{gmm_cuisines}
+\includegraphics[width=0.45\linewidth]{gmm_cuisines}
 }
 \end{figure}
+
 
 \subsection{LDA Model on Negative Reviews with 50 Topics}
 \begin{figure}[h]
 \centering
 {
-\includegraphics[width=0.6\linewidth]{first_image}
+\includegraphics[width=0.45\linewidth]{first_image}
+}
+\end{figure}
+
+\subsection{Google Cloud Natural Language API - In Action}
+\begin{figure}[h]
+\centering
+{
+\includegraphics[width=0.45\linewidth]{googleapi}
 }
 \end{figure}
 
